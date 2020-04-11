@@ -15,21 +15,18 @@
 <meta property="og:site_name" content="博客">
 <meta property="og:description" content="Object类 * Date类 * DateFormat类 * Calendar类 * System类 * StringBuilder类 * 包装类">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://yoursite.com/2020/04/04/Object%E7%B1%BB%E3%80%81%E5%B8%B8%E7%94%A8%E7%B1%BB/img%5CtoString%E6%96%B9%E6%B3%95%E7%9A%84%E8%87%AA%E5%8A%A8%E9%87%8D%E5%86%99.bmp">
-<meta property="og:image" content="http://yoursite.com/2020/04/04/Object%E7%B1%BB%E3%80%81%E5%B8%B8%E7%94%A8%E7%B1%BB/img%5Cequals%E6%96%B9%E6%B3%951.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/04/Object%E7%B1%BB%E3%80%81%E5%B8%B8%E7%94%A8%E7%B1%BB/img%5Cequals%E6%96%B9%E6%B3%952.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/04/Object%E7%B1%BB%E3%80%81%E5%B8%B8%E7%94%A8%E7%B1%BB/img%5Cequals%E6%96%B9%E6%B3%953.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/04/Object%E7%B1%BB%E3%80%81%E5%B8%B8%E7%94%A8%E7%B1%BB/img%5C%E6%97%A5%E5%8E%86.jpg">
-<meta property="og:image" content="http://yoursite.com/2020/04/04/Object%E7%B1%BB%E3%80%81%E5%B8%B8%E7%94%A8%E7%B1%BB/img%5CString%E6%8B%BC%E6%8E%A5%E9%97%AE%E9%A2%98.bmp">
-<meta property="og:image" content="http://yoursite.com/2020/04/04/Object%E7%B1%BB%E3%80%81%E5%B8%B8%E7%94%A8%E7%B1%BB/img%5C06-StringBuilder%E7%9A%84%E5%8E%9F%E7%90%86.png">
+<meta property="og:image" content="http://qiniuyun.yegege.xyz/img/toString%E6%96%B9%E6%B3%95%E7%9A%84%E8%87%AA%E5%8A%A8%E9%87%8D%E5%86%99.bmp">
+<meta property="og:image" content="http://qiniuyun.yegege.xyz/img/%E6%97%A5%E5%8E%86.jpg">
+<meta property="og:image" content="http://qiniuyun.yegege.xyz/img/String%E6%8B%BC%E6%8E%A5%E9%97%AE%E9%A2%98.bmp">
+<meta property="og:image" content="http://qiniuyun.yegege.xyz/img/06-StringBuilder%E7%9A%84%E5%8E%9F%E7%90%86.png">
 <meta property="article:published_time" content="2020-04-04T10:27:24.000Z">
-<meta property="article:modified_time" content="2020-04-04T10:37:31.129Z">
+<meta property="article:modified_time" content="2020-04-11T15:23:46.126Z">
 <meta property="article:author" content="杨烨">
 <meta property="article:tag" content="Java常用API">
 <meta property="article:tag" content="Object类">
 <meta property="article:tag" content="Java API">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/04/04/Object%E7%B1%BB%E3%80%81%E5%B8%B8%E7%94%A8%E7%B1%BB/img%5CtoString%E6%96%B9%E6%B3%95%E7%9A%84%E8%87%AA%E5%8A%A8%E9%87%8D%E5%86%99.bmp">
+<meta name="twitter:image" content="http://qiniuyun.yegege.xyz/img/toString%E6%96%B9%E6%B3%95%E7%9A%84%E8%87%AA%E5%8A%A8%E9%87%8D%E5%86%99.bmp">
   
     <link rel="alternative" href="/atom.xml" title="博客" type="application/atom+xml">
   
@@ -202,7 +199,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"Person&#123;"</span> + <span class="string">"name='"</span> + name + <span class="string">'\''</span> + <span class="string">", age="</span> + age + <span class="string">'&#125;'</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 省略构造器与Getter Setter</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>在IntelliJ IDEA中，可以点击<code>Code</code>菜单中的<code>Generate...</code>，也可以使用快捷键<code>alt+insert</code>，点击<code>toString()</code>选项。选择需要包含的成员变量并确定。如下图所示：</p>
-<p><img src="img%5CtoString%E6%96%B9%E6%B3%95%E7%9A%84%E8%87%AA%E5%8A%A8%E9%87%8D%E5%86%99.bmp" alt="toString方法的自动重写"></p>
+<p><img src="http://qiniuyun.yegege.xyz/img/toString%E6%96%B9%E6%B3%95%E7%9A%84%E8%87%AA%E5%8A%A8%E9%87%8D%E5%86%99.bmp" alt="toString方法的自动重写"></p>
 <blockquote>
 <p>小贴士： 在我们直接使用输出语句输出对象名的时候,其实通过该对象调用了其toString()方法。</p>
 </blockquote>
@@ -214,13 +211,7 @@
 <h3 id="对象内容比较"><a href="#对象内容比较" class="headerlink" title="对象内容比较"></a>对象内容比较</h3><p>如果希望进行对象的内容比较，即所有或指定的部分成员变量相同就判定两个对象相同，则可以覆盖重写equals方法。例如：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Objects;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;	</span><br><span class="line">	<span class="keyword">private</span> String name;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">	</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object o)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 如果对象地址一样，则认为相同</span></span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span> == o)</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        <span class="comment">// 如果参数为空，或者类型信息不一样，则认为不同</span></span><br><span class="line">        <span class="keyword">if</span> (o == <span class="keyword">null</span> || getClass() != o.getClass())</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        <span class="comment">// 转换为当前类型</span></span><br><span class="line">        Person person = (Person) o;</span><br><span class="line">        <span class="comment">// 要求基本类型相等，并且将引用类型交给java.util.Objects类的equals静态方法取用结果</span></span><br><span class="line">        <span class="keyword">return</span> age == person.age &amp;&amp; Objects.equals(name, person.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>这段代码充分考虑了对象为空、类型一致等问题，但方法内容并不唯一。大多数IDE都可以自动生成equals方法的代码内容。在IntelliJ IDEA中，可以使用<code>Code</code>菜单中的<code>Generate…</code>选项，也可以使用快捷键<code>alt+insert</code>，并选择<code>equals() and hashCode()</code>进行自动代码生成。如下图所示：</p>
-<p><img src="img%5Cequals%E6%96%B9%E6%B3%951.png" alt=""></p>
-<p><img src="img%5Cequals%E6%96%B9%E6%B3%952.png" alt=""></p>
-<p><img src="img%5Cequals%E6%96%B9%E6%B3%953.png" alt=""></p>
-<blockquote>
-<p>tips：Object类当中的hashCode等其他方法，今后学习。</p>
-</blockquote>
+<p>这段代码充分考虑了对象为空、类型一致等问题，但方法内容并不唯一。大多数IDE都可以自动生成equals方法的代码内容。在IntelliJ IDEA中，可以使用<code>Code</code>菜单中的<code>Generate…</code>选项，也可以使用快捷键<code>alt+insert</code>，并选择<code>equals() and hashCode()</code>进行自动代码生成。</p>
 <h2 id="1-4-Objects类"><a href="#1-4-Objects类" class="headerlink" title="1.4 Objects类"></a>1.4 Objects类</h2><p>在刚才IDEA自动重写equals代码中，使用到了<code>java.util.Objects</code>类，那么这个类是什么呢？</p>
 <p>在<strong>JDK7</strong>添加了一个Objects工具类，它提供了一些方法来操作对象，它由一些静态的实用方法组成，这些方法是null-save（空指针安全的）或null-tolerant（容忍空指针的），用于计算对象的hashcode、返回对象的字符串表示形式、比较两个对象。</p>
 <p>在比较两个对象的时候，Object的equals方法容易抛出空指针异常，而Objects类中的equals方法就优化了这个问题。方法如下：</p>
@@ -318,7 +309,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">function</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">	System.out.println(<span class="string">"请输入出生日期 格式 YYYY-MM-dd"</span>);</span><br><span class="line">	<span class="comment">// 获取出生日期,键盘输入</span></span><br><span class="line">	String birthdayString = <span class="keyword">new</span> Scanner(System.in).next();</span><br><span class="line">	<span class="comment">// 将字符串日期,转成Date对象</span></span><br><span class="line">	<span class="comment">// 创建SimpleDateFormat对象,写日期模式</span></span><br><span class="line">	SimpleDateFormat sdf = <span class="keyword">new</span> SimpleDateFormat(<span class="string">"yyyy-MM-dd"</span>);</span><br><span class="line">	<span class="comment">// 调用方法parse,字符串转成日期对象</span></span><br><span class="line">	Date birthdayDate = sdf.parse(birthdayString);	</span><br><span class="line">	<span class="comment">// 获取今天的日期对象</span></span><br><span class="line">	Date todayDate = <span class="keyword">new</span> Date();	</span><br><span class="line">	<span class="comment">// 将两个日期转成毫秒值,Date类的方法getTime</span></span><br><span class="line">	<span class="keyword">long</span> birthdaySecond = birthdayDate.getTime();</span><br><span class="line">	<span class="keyword">long</span> todaySecond = todayDate.getTime();</span><br><span class="line">	<span class="keyword">long</span> secone = todaySecond-birthdaySecond;	</span><br><span class="line">	<span class="keyword">if</span> (secone &lt; <span class="number">0</span>)&#123;</span><br><span class="line">		System.out.println(<span class="string">"还没出生呢"</span>);</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		System.out.println(secone/<span class="number">1000</span>/<span class="number">60</span>/<span class="number">60</span>/<span class="number">24</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="2-4-Calendar类"><a href="#2-4-Calendar类" class="headerlink" title="2.4 Calendar类"></a>2.4 Calendar类</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>日历我们都见过</p>
-<p><img src="img%5C%E6%97%A5%E5%8E%86.jpg" alt=""></p>
+<p><img src="http://qiniuyun.yegege.xyz/img/%E6%97%A5%E5%8E%86.jpg" alt=""></p>
 <p><code>java.util.Calendar</code>是日历类，在Date后出现，替换掉了许多Date的方法。该类将所有可能用到的时间信息封装为静态成员变量，方便获取。日历类就是方便获取各个时间属性的。</p>
 <h3 id="获取方式"><a href="#获取方式" class="headerlink" title="获取方式"></a>获取方式</h3><p>Calendar为抽象类，由于语言敏感性，Calendar类在创建对象时并非直接创建，而是通过静态方法创建，返回子类对象，如下：</p>
 <p>Calendar静态方法</p>
@@ -456,12 +447,12 @@
 
 <p>在API中对String类有这样的描述：字符串是常量，它们的值在创建后不能被更改。</p>
 <p>根据这句话分析我们的代码，其实总共产生了三个字符串，即<code>&quot;Hello&quot;</code>、<code>&quot;World&quot;</code>和<code>&quot;HelloWorld&quot;</code>。引用变量s首先指向<code>Hello</code>对象，最终指向拼接出来的新字符串对象，即<code>HelloWord</code> 。</p>
-<p><img src="img%5CString%E6%8B%BC%E6%8E%A5%E9%97%AE%E9%A2%98.bmp" alt=""></p>
+<p><img src="http://qiniuyun.yegege.xyz/img/String%E6%8B%BC%E6%8E%A5%E9%97%AE%E9%A2%98.bmp" alt=""></p>
 <p>由此可知，如果对字符串进行拼接操作，每次拼接，都会构建一个新的String对象，既耗时，又浪费空间。为了解决这一问题，可以使用<code>java.lang.StringBuilder</code>类。</p>
 <h2 id="4-2-StringBuilder概述"><a href="#4-2-StringBuilder概述" class="headerlink" title="4.2 StringBuilder概述"></a>4.2 StringBuilder概述</h2><p>查阅<code>java.lang.StringBuilder</code>的API，StringBuilder又称为可变字符序列，它是一个类似于 String 的字符串缓冲区，通过某些方法调用可以改变该序列的长度和内容。</p>
 <p>原来StringBuilder是个字符串的缓冲区，即它是一个容器，容器中可以装很多字符串。并且能够对其中的字符串进行各种操作。</p>
 <p>它的内部拥有一个数组用来存放字符串内容，进行字符串拼接时，直接在数组中加入新内容。StringBuilder会自动维护数组的扩容。原理如下图所示：(默认16字符空间，超过自动扩充)</p>
-<p><img src="img%5C06-StringBuilder%E7%9A%84%E5%8E%9F%E7%90%86.png" alt="06-StringBuilder的原理"></p>
+<p><img src="http://qiniuyun.yegege.xyz/img/06-StringBuilder%E7%9A%84%E5%8E%9F%E7%90%86.png" alt=""></p>
 <h2 id="4-3-构造方法"><a href="#4-3-构造方法" class="headerlink" title="4.3 构造方法"></a>4.3 构造方法</h2><p>根据StringBuilder的API文档，常用构造方法有2个：</p>
 <ul>
 <li><code>public StringBuilder()</code>：构造一个空的StringBuilder容器。</li>
@@ -779,15 +770,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">MySQL</a>
+                <a href="javascript:void(0)" class="js-tag color2">JQuery</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">JDBC</a>
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -800,6 +787,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Listener</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">MySQL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">JDBC</a>
               </li>
              
               <li class="article-tag-list-item">

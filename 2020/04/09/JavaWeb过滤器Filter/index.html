@@ -8,16 +8,16 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>JavaWeb中的过滤器 Filter | 博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Filter：过滤器 Listener：监听器">
+  <meta name="description" content="执行流程  生命周期方法  两种配置方式  过滤器链">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaWeb中的过滤器 Filter">
 <meta property="og:url" content="http://yoursite.com/2020/04/09/JavaWeb%E8%BF%87%E6%BB%A4%E5%99%A8Filter/index.html">
 <meta property="og:site_name" content="博客">
-<meta property="og:description" content="Filter：过滤器 Listener：监听器">
+<meta property="og:description" content="执行流程  生命周期方法  两种配置方式  过滤器链">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://qiniuyun.yegege.xyz/img/%E8%BF%87%E6%BB%A4%E5%99%A8%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F.png">
 <meta property="article:published_time" content="2020-04-09T08:31:24.000Z">
-<meta property="article:modified_time" content="2020-04-09T16:01:37.263Z">
+<meta property="article:modified_time" content="2020-04-11T15:27:44.860Z">
 <meta property="article:author" content="杨烨">
 <meta property="article:tag" content="Filter">
 <meta property="article:tag" content="JavaWeb">
@@ -175,7 +175,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p> Filter：过滤器<br> Listener：监听器<br>  <a id="more"></a></p>
+        <p>  执行流程  生命周期方法  两种配置方式  过滤器链<br>  <a id="more"></a></p>
 <h2 id="1-1、概念："><a href="#1-1、概念：" class="headerlink" title="1.1、概念："></a>1.1、概念：</h2><ul>
 <li>生活中的过滤器：净水器,空气净化器，土匪、</li>
 <li>web中的过滤器：当访问服务器的资源时，过滤器可以将请求拦截下来，完成一些特殊的功能。</li>
@@ -336,6 +336,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2020/04/11/JQuery%E5%9F%BA%E7%A1%80/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          JQuery基础
+        
+      </div>
+    </a>
+  
   
     <a href="/2020/04/04/MySQL%E5%A4%9A%E8%A1%A8&%E4%BA%8B%E7%89%A9/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">MySQL多表&amp;事务</div>
@@ -473,15 +482,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">MySQL</a>
+                <a href="javascript:void(0)" class="js-tag color2">JQuery</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">JDBC</a>
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -494,6 +499,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Listener</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">MySQL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">JDBC</a>
               </li>
              
               <li class="article-tag-list-item">
