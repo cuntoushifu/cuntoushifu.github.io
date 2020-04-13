@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>标签 | 博客</title>
+  <title>Javascript的对象表示 | 博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="标签">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+  <meta name="description" content="语法 遍历 json和java对象相互转换">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Javascript的对象表示">
+<meta property="og:url" content="http://yoursite.com/2020/04/13/JavaScript%E7%9A%84%E5%AF%B9%E8%B1%A1%E8%A1%A8%E7%A4%BA_JSON/index.html">
 <meta property="og:site_name" content="博客">
+<meta property="og:description" content="语法 遍历 json和java对象相互转换">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-03-31T03:00:10.000Z">
-<meta property="article:modified_time" content="2020-04-07T16:02:14.957Z">
+<meta property="article:published_time" content="2020-04-13T15:07:46.000Z">
+<meta property="article:modified_time" content="2020-04-13T15:11:55.070Z">
 <meta property="article:author" content="杨烨">
+<meta property="article:tag" content="JavaScript">
+<meta property="article:tag" content="Json">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="博客" type="application/atom+xml">
@@ -148,27 +152,131 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-JavaScript的对象表示_JSON" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      标签
+      Javascript的对象表示
     </h1>
   
 
         
-        <a href="/tags/index.html" class="archive-article-date">
-  	<time datetime="2020-03-31T03:00:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-31</time>
+        <a href="/2020/04/13/JavaScript%E7%9A%84%E5%AF%B9%E8%B1%A1%E8%A1%A8%E7%A4%BA_JSON/" class="archive-article-date">
+  	<time datetime="2020-04-13T15:07:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <ul>
+<li>语法</li>
+<li>遍历</li>
+<li>json和java对象相互转换</li>
+</ul>
+<a id="more"></a>
+
+<h1 id="一、基本介绍"><a href="#一、基本介绍" class="headerlink" title="一、基本介绍"></a>一、基本介绍</h1><ol>
+<li>概念： JavaScript Object Notation        JavaScript对象表示法</li>
+<li>描述对象：<code>var p = {&quot;name&quot;:&quot;张三&quot;,&quot;age&quot;:23,&quot;gender&quot;:&quot;男&quot;};</code><ul>
+<li>JSON现在多用于存储和交换文本信息的语法</li>
+<li>进行数据的传输</li>
+<li>JSON 比 XML 更小、更快，更易解析。<h1 id="二、语法"><a href="#二、语法" class="headerlink" title="二、语法"></a>二、语法</h1><h2 id="1-基本规则"><a href="#1-基本规则" class="headerlink" title="1. 基本规则"></a>1. 基本规则</h2></li>
+</ul>
+</li>
+<li>数据在名称/值对中：json数据是由键值对构成的。<ul>
+<li>键用引号（单双都可）引起来，也可以不使用引号。</li>
+<li>值的取值类型：<ul>
+<li>数字（整数或浮点数）</li>
+<li>字符串（在双引号中）</li>
+<li>逻辑值（true 或 false）</li>
+<li>数组（在方括号中）{“persons”:[{},{}]}</li>
+<li>对象（在花括号中） {“address” :{“province:”安徽”}}</li>
+<li>null</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>数据由逗号分隔：多个键值对由逗号分隔。</li>
+<li>花括号保存对象：使用{}定义json格式</li>
+<li>方括号保存数组：[]</li>
+<li>代码演示<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">        <span class="comment">//1.定义基本格式</span></span><br><span class="line">        <span class="keyword">var</span> person = &#123;<span class="string">"name"</span>: <span class="string">"张三"</span>, <span class="attr">age</span>: <span class="number">23</span>, <span class="string">'gender'</span>: <span class="literal">true</span>&#125;;</span><br><span class="line">        <span class="comment">//alert(person);</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//2.嵌套格式 &#123;&#125; --&gt; []</span></span><br><span class="line">        <span class="keyword">var</span> persons = &#123;</span><br><span class="line">            <span class="string">"persons"</span>: [</span><br><span class="line">                &#123;<span class="string">"name"</span>: <span class="string">"刘能"</span>, <span class="string">"age"</span>: <span class="number">56</span>, <span class="string">"gender"</span>: <span class="literal">true</span>&#125;,</span><br><span class="line">                &#123;<span class="string">"name"</span>: <span class="string">"赵四"</span>, <span class="string">"age"</span>: <span class="number">35</span>, <span class="string">"gender"</span>: <span class="literal">true</span>&#125;,</span><br><span class="line">                &#123;<span class="string">"name"</span>: <span class="string">"谢广坤"</span>, <span class="string">"age"</span>: <span class="number">65</span>, <span class="string">"gender"</span>: <span class="literal">false</span>&#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="comment">//alert(persons);</span></span><br><span class="line">        <span class="comment">//2.嵌套格式 [] --&gt; &#123;&#125;</span></span><br><span class="line">        <span class="keyword">var</span> ps = [&#123;<span class="string">"name"</span>: <span class="string">"刘能"</span>, <span class="string">"age"</span>: <span class="number">56</span>, <span class="string">"gender"</span>: <span class="literal">true</span>&#125;,</span><br><span class="line">            &#123;<span class="string">"name"</span>: <span class="string">"赵四"</span>, <span class="string">"age"</span>: <span class="number">35</span>, <span class="string">"gender"</span>: <span class="literal">true</span>&#125;,</span><br><span class="line">            &#123;<span class="string">"name"</span>: <span class="string">"谢广坤"</span>, <span class="string">"age"</span>: <span class="number">65</span>, <span class="string">"gender"</span>: <span class="literal">false</span>&#125;];</span><br><span class="line">        alert(ps);</span><br><span class="line">    &lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="2-获取数据"><a href="#2-获取数据" class="headerlink" title="2. 获取数据"></a>2. 获取数据</h2><h3 id="1-json对象-键名"><a href="#1-json对象-键名" class="headerlink" title="1.json对象.键名"></a>1.<code>json对象.键名</code></h3><h3 id="2-json对象-quot-键名-quot"><a href="#2-json对象-quot-键名-quot" class="headerlink" title="2. json对象[&quot;键名&quot;]"></a>2. <code>json对象[&quot;键名&quot;]</code></h3><h3 id="3-数组对象-索引"><a href="#3-数组对象-索引" class="headerlink" title="3.数组对象[索引]"></a>3.<code>数组对象[索引]</code></h3><h3 id="4-代码演示"><a href="#4-代码演示" class="headerlink" title="4.代码演示"></a>4.代码演示</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> name = person.name;</span><br><span class="line"><span class="keyword">var</span> name = person[<span class="string">"name"</span>];</span><br><span class="line"><span class="keyword">var</span> name1 = persons.persons[<span class="number">2</span>].name;<span class="comment">//谢广坤</span></span><br><span class="line"><span class="keyword">var</span> name = ps[<span class="number">1</span>].name;<span class="comment">//赵四</span></span><br></pre></td></tr></table></figure>
+<h2 id="3-遍历"><a href="#3-遍历" class="headerlink" title="3. 遍历"></a>3. 遍历</h2></li>
+<li>语法：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">  <span class="comment">//获取person对象中所有的键和值</span></span><br><span class="line">        <span class="comment">// for in</span></span><br><span class="line">        <span class="comment">//key是键的字符串格式 只能用方括号获取</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">in</span>  person)&#123;</span><br><span class="line">            <span class="comment">//alert(key+":"+person.key);//这样的方式获取不行。因为相当于 person."name"</span></span><br><span class="line">            alert(key+<span class="string">":"</span>+person[key]);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line"><span class="comment">//获取ps中所有值</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; ps.length; i++) &#123;</span><br><span class="line">            <span class="keyword">var</span> p = ps[i];</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">in</span> p) &#123;</span><br><span class="line">                alert(key + <span class="string">":"</span> + p[key]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure></li>
+<li>注意：key是键的字符串格式 只能用方括号获取</li>
+</ol>
+<h1 id="三、JSON数据和Java对象的相互转换"><a href="#三、JSON数据和Java对象的相互转换" class="headerlink" title="三、JSON数据和Java对象的相互转换"></a>三、JSON数据和Java对象的相互转换</h1><h2 id="1-JSON解析器："><a href="#1-JSON解析器：" class="headerlink" title="1. JSON解析器："></a>1. JSON解析器：</h2><ul>
+<li>常见的解析器：Jsonlib，Gson，fastjson，jackson<h2 id="2-JSON转为Java对象"><a href="#2-JSON转为Java对象" class="headerlink" title="2. JSON转为Java对象"></a>2. JSON转为Java对象</h2></li>
+</ul>
+<ol>
+<li><p>使用步骤：</p>
+<ol>
+<li>导入jackson的相关jar包</li>
+<li>创建Jackson核心对象 ObjectMapper</li>
+<li>调用ObjectMapper的相关方法进行转换</li>
+</ol>
+</li>
+<li><p>转换方法：<br> <code>readValue(json字符串数据,Class)</code></p>
+</li>
+<li><p>代码演示</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test5</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">      <span class="comment">//1.初始化JSON字符串</span></span><br><span class="line">      String json = <span class="string">"&#123;\"gender\":\"男\",\"name\":\"赵四\",\"age\":\"56\"&#125;"</span>;</span><br><span class="line"></span><br><span class="line">      <span class="comment">//2.创建ObjectMapper对象</span></span><br><span class="line">      ObjectMapper mapper = <span class="keyword">new</span> ObjectMapper();</span><br><span class="line">      <span class="comment">//3.转换为Java对象 Person</span></span><br><span class="line">      Person person = mapper.readValue(json, Person<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line"></span><br><span class="line">      System.out.println(person);</span><br><span class="line"></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="3-Java对象转换JSON"><a href="#3-Java对象转换JSON" class="headerlink" title="3. Java对象转换JSON"></a>3. Java对象转换JSON</h2></li>
+<li><p>使用步骤：</p>
+<ol>
+<li>导入jackson的相关jar包</li>
+<li>创建Jackson核心对象 ObjectMapper</li>
+<li>调用ObjectMapper的相关方法进行转换</li>
+</ol>
+</li>
+<li><p>转换方法：</p>
+<ul>
+<li><code>writeValue(参数1,obj)</code>:<br>  参数1：<br>  <code>File</code>：将obj对象转换为JSON字符串，并保存到指定的文件中<br>  <code>Writer</code>：将obj对象转换为JSON字符串，并将json数据填充到字符输出流中<br>  <code>OutputStream</code>：将obj对象转换为JSON字符串，并将json数据填充到字节输出流中</li>
+<li><code>writeValueAsString(obj)</code>:将对象转为json字符串</li>
+</ul>
+</li>
+<li><p>代码演示</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cn.yangye.domain.Person;</span><br><span class="line"><span class="keyword">import</span> com.fasterxml.jackson.core.JsonProcessingException;</span><br><span class="line"><span class="keyword">import</span> com.fasterxml.jackson.databind.ObjectMapper;</span><br><span class="line"><span class="keyword">import</span> org.junit.Test;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JacksonTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//Java对象转为Json</span></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test1</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="comment">//1.创建Person对象</span></span><br><span class="line">        Person p = <span class="keyword">new</span> Person();</span><br><span class="line">        p.setName(<span class="string">"刘能"</span>);</span><br><span class="line">        p.setAge(<span class="number">56</span>);</span><br><span class="line">        p.setGender(<span class="string">"男"</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//2.创建Jackson的核心对象 ObjectMapper</span></span><br><span class="line">        ObjectMapper mapper = <span class="keyword">new</span> ObjectMapper();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//3.转换</span></span><br><span class="line">        String json = mapper.writeValueAsString(p);</span><br><span class="line">        System.out.println(json); <span class="comment">//&#123;"name":"刘能","age":56,"gender":"男"&#125;</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//writeValue将数据写到 E://a.txt文件中</span></span><br><span class="line">        mapper.writeValue(<span class="keyword">new</span> File(<span class="string">"e://a//a.txt"</span>), p);</span><br><span class="line">        <span class="comment">//writeValue将数据关联到write中</span></span><br><span class="line">        mapper.writeValue(<span class="keyword">new</span> FileWriter(<span class="string">"e://a//b.txt"</span>), p);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>注解：</p>
+<ol>
+<li><code>@JsonIgnore</code>：排除属性。转换时忽略该属性。</li>
+<li><code>@JsonFormat</code>：属性值的格式化<ul>
+<li><code>@JsonFormat(pattern = &quot;yyyy-MM-dd&quot;)</code></li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>复杂java对象转换</p>
+<ol>
+<li>List：数组</li>
+<li>Map：对象格式一致</li>
+<li>代码演示<ol>
+<li>List<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test3</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="comment">//1.创建Person对象</span></span><br><span class="line">        Person p = <span class="keyword">new</span> Person();</span><br><span class="line">        p.setName(<span class="string">"刘能"</span>);</span><br><span class="line">        p.setAge(<span class="number">56</span>);</span><br><span class="line">        p.setGender(<span class="string">"男"</span>);</span><br><span class="line">        p.setBirthday(<span class="keyword">new</span> Date());</span><br><span class="line"></span><br><span class="line">        Person p1 = <span class="keyword">new</span> Person();</span><br><span class="line">        p1.setName(<span class="string">"赵四"</span>);</span><br><span class="line">        p1.setAge(<span class="number">56</span>);</span><br><span class="line">        p1.setGender(<span class="string">"男"</span>);</span><br><span class="line">        p1.setBirthday(<span class="keyword">new</span> Date());</span><br><span class="line"></span><br><span class="line">        Person p2 = <span class="keyword">new</span> Person();</span><br><span class="line">        p2.setName(<span class="string">"谢广坤"</span>);</span><br><span class="line">        p2.setAge(<span class="number">56</span>);</span><br><span class="line">        p2.setGender(<span class="string">"男"</span>);</span><br><span class="line">        p2.setBirthday(<span class="keyword">new</span> Date());</span><br><span class="line"></span><br><span class="line">        <span class="comment">//创建list集合</span></span><br><span class="line">        ArrayList&lt;Person&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        list.add(p);</span><br><span class="line">        list.add(p1);</span><br><span class="line">        list.add(p2);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//转换</span></span><br><span class="line">        ObjectMapper mapper = <span class="keyword">new</span> ObjectMapper();</span><br><span class="line">        String json = mapper.writeValueAsString(list);</span><br><span class="line">        System.out.println(json);</span><br><span class="line">        <span class="comment">//[&#123;"name":"刘能","age":56,"gender":"男","birthday":"2020-04-13"&#125;,&#123;"name":"赵四","age":56,"gender":"男","birthday":"2020-04-13"&#125;,&#123;"name":"谢广坤","age":56,"gender":"男","birthday":"2020-04-13"&#125;]</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+</li>
+</ol>
+<ol start="2">
+<li>Map<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test4</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    <span class="comment">//1.创建map集合</span></span><br><span class="line">    Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">    map.put(<span class="string">"name"</span>, <span class="string">"赵四"</span>);</span><br><span class="line">    map.put(<span class="string">"age"</span>, <span class="string">"56"</span>);</span><br><span class="line">    map.put(<span class="string">"gender"</span>, <span class="string">"男"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//转换</span></span><br><span class="line">    ObjectMapper mapper = <span class="keyword">new</span> ObjectMapper();</span><br><span class="line">    String json = mapper.writeValueAsString(map);</span><br><span class="line">    System.out.println(json);</span><br><span class="line">    <span class="comment">//&#123;"gender":"男","name":"赵四","age":"56"&#125;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="四、案例"><a href="#四、案例" class="headerlink" title="四、案例"></a>四、案例</h1></li>
+</ol>
+</li>
+</ol>
+<p>需求：校验用户名是否存在</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> cn.yangye.web.servlet;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.fasterxml.jackson.databind.ObjectMapper;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletException;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.WebServlet;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServlet;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletResponse;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet</span>(<span class="string">"/findUserServlet"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FindUserServlet</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">       <span class="comment">//设置响应数据格式为json</span></span><br><span class="line">        response.setContentType(<span class="string">"application/json;charset=utf-8"</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//1.获取用户名</span></span><br><span class="line">        String username = request.getParameter(<span class="string">"username"</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//2.调用service层判断用户名是否存在</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//期望服务器响应会的数据格式：&#123;"userExsit":true,"msg":"此用户已经存在"&#125;</span></span><br><span class="line">        <span class="comment">//                        &#123;"userExsit":false,"msg":"用户名可用"&#125;</span></span><br><span class="line">        Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;String, Object&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (<span class="string">"tom"</span>.equals(username)) &#123;</span><br><span class="line">            <span class="comment">//存在</span></span><br><span class="line">            map.put(<span class="string">"userExsit"</span>, <span class="keyword">true</span>);</span><br><span class="line">            map.put(<span class="string">"msg"</span>, <span class="string">"此用户已经存在"</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">//不存在</span></span><br><span class="line">            map.put(<span class="string">"userExsit"</span>, <span class="keyword">false</span>);</span><br><span class="line">            map.put(<span class="string">"msg"</span>, <span class="string">"用户名可用"</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//将map转为json，并且传递给客户端浏览器</span></span><br><span class="line">        ObjectMapper mapper = <span class="keyword">new</span> ObjectMapper();</span><br><span class="line">        mapper.writeValue(response.getWriter(), map);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.doPost(request, response);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>注册<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./js/jquery-3.3.1.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">        <span class="comment">//在页面加载完成后</span></span></span><br><span class="line"><span class="javascript">        $(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="actionscript">            <span class="comment">//给username绑定blur事件</span></span></span><br><span class="line"><span class="javascript">            $(<span class="string">"#username"</span>).blur(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="actionscript">                <span class="comment">//获取username文本输入框的值</span></span></span><br><span class="line"><span class="javascript">                <span class="keyword">var</span> username = $(<span class="keyword">this</span>).val();</span></span><br><span class="line"><span class="actionscript">                <span class="comment">//发送ajax请求</span></span></span><br><span class="line"><span class="actionscript">                <span class="comment">//期望服务器响应会的数据格式：&#123;"userExsit":true,"msg":"此用户已经存在"&#125;</span></span></span><br><span class="line"><span class="actionscript">                <span class="comment">//                        &#123;"userExsit":false,"msg":"用户名可用"&#125;</span></span></span><br><span class="line"><span class="javascript">                $.<span class="keyword">get</span>("findUserServlet", &#123;username: username&#125;, <span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                    <span class="keyword">var</span> span = $(<span class="string">"#s_username"</span>);</span></span><br><span class="line"><span class="actionscript">                    <span class="comment">//判断userExsit键是否为true</span></span></span><br><span class="line">                    if (data.userExsit) &#123;</span><br><span class="line"><span class="actionscript">                        <span class="comment">//用户名存在</span></span></span><br><span class="line"><span class="actionscript">                        span.css(<span class="string">"color"</span>, <span class="string">"red"</span>);</span></span><br><span class="line">                        span.html(data.msg);</span><br><span class="line"><span class="actionscript">                    &#125; <span class="keyword">else</span> &#123;</span></span><br><span class="line"><span class="actionscript">                        <span class="comment">//用户名不存在</span></span></span><br><span class="line"><span class="actionscript">                        span.css(<span class="string">"color"</span>, <span class="string">"green"</span>);</span></span><br><span class="line">                        span.html(data.msg);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;);</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"username"</span> <span class="attr">name</span>=<span class="string">"username"</span> <span class="attr">placeholder</span>=<span class="string">"请输入用户名"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"s_username"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"password"</span> <span class="attr">placeholder</span>=<span class="string">"请输入密码"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="五、注意"><a href="#五、注意" class="headerlink" title="五、注意"></a>五、注意</h1><p>服务器响应的数据，在客户端使用时，要想当成json数据格式使用</p>
+<ul>
+<li>浏览器：<code>$.get(type)</code>:将最后一个参数type指定为json</li>
+<li>服务器：指定MIME类型 application/json<br>  <code>response.setContentType(&quot;application/json;charset=utf-8&quot;);</code></li>
+</ul>
+
       
 
       
@@ -197,7 +305,33 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Json</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -208,6 +342,16 @@
 </article>
 
   
+<nav id="article-nav">
+  
+  
+    <a href="/2020/04/13/%E5%BC%82%E6%AD%A5%E7%9A%84JavaScript%20%E5%92%8C%20XML_Ajax/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">异步的JavaScript和XML_Ajax</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -229,7 +373,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、基本介绍"><span class="toc-number">1.</span> <span class="toc-text">一、基本介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、语法"><span class="toc-number">2.</span> <span class="toc-text">二、语法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-基本规则"><span class="toc-number">2.1.</span> <span class="toc-text">1. 基本规则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-获取数据"><span class="toc-number">2.2.</span> <span class="toc-text">2. 获取数据</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-json对象-键名"><span class="toc-number">2.2.1.</span> <span class="toc-text">1.json对象.键名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-json对象-quot-键名-quot"><span class="toc-number">2.2.2.</span> <span class="toc-text">2. json对象[&quot;键名&quot;]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-数组对象-索引"><span class="toc-number">2.2.3.</span> <span class="toc-text">3.数组对象[索引]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-代码演示"><span class="toc-number">2.2.4.</span> <span class="toc-text">4.代码演示</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-遍历"><span class="toc-number">2.3.</span> <span class="toc-text">3. 遍历</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三、JSON数据和Java对象的相互转换"><span class="toc-number">3.</span> <span class="toc-text">三、JSON数据和Java对象的相互转换</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-JSON解析器："><span class="toc-number">3.1.</span> <span class="toc-text">1. JSON解析器：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-JSON转为Java对象"><span class="toc-number">3.2.</span> <span class="toc-text">2. JSON转为Java对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Java对象转换JSON"><span class="toc-number">3.3.</span> <span class="toc-text">3. Java对象转换JSON</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#四、案例"><span class="toc-number">4.</span> <span class="toc-text">四、案例</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#五、注意"><span class="toc-number">5.</span> <span class="toc-text">五、注意</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -271,7 +415,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
