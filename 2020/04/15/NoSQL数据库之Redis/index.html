@@ -6,15 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: JDBC | 博客</title>
+  <title>NoSQL数据库之Redis | 博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="博客">
-<meta property="og:url" content="http://yoursite.com/tags/JDBC/index.html">
+  <meta name="description" content="Redis介绍 Redis下载安装 Redis数据结构和命令操作 Redis的持久化">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NoSQL数据库之Redis">
+<meta property="og:url" content="http://yoursite.com/2020/04/15/NoSQL%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B9%8BRedis/index.html">
 <meta property="og:site_name" content="博客">
+<meta property="og:description" content="Redis介绍 Redis下载安装 Redis数据结构和命令操作 Redis的持久化">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://qiniuyun.yegege.xyz/img/3.%E5%88%97%E8%A1%A8list%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.bmp">
+<meta property="article:published_time" content="2020-04-15T05:50:24.000Z">
+<meta property="article:modified_time" content="2020-04-15T05:46:15.624Z">
 <meta property="article:author" content="杨烨">
+<meta property="article:tag" content="数据库">
+<meta property="article:tag" content="NoSQL">
+<meta property="article:tag" content="Redis">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://qiniuyun.yegege.xyz/img/3.%E5%88%97%E8%A1%A8list%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.bmp">
   
     <link rel="alternative" href="/atom.xml" title="博客" type="application/atom+xml">
   
@@ -146,36 +155,171 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-NoSQL数据库之Redis" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/03/%E7%94%A8Java%E8%AF%AD%E8%A8%80%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E5%BA%93---JDBC%E7%9A%84%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="archive-article-date">
-  	<time datetime="2020-04-03T13:01:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-03</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/03/%E7%94%A8Java%E8%AF%AD%E8%A8%80%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E5%BA%93---JDBC%E7%9A%84%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/">JDBC快速入门</a>
+    <h1 class="article-title" itemprop="name">
+      NoSQL数据库之Redis
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/04/15/NoSQL%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B9%8BRedis/" class="archive-article-date">
+  	<time datetime="2020-04-15T05:50:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>Redis介绍</li>
+<li>Redis下载安装</li>
+<li>Redis数据结构和命令操作</li>
+<li>Redis的持久化<a id="more"></a>
+
+</li>
+</ul>
+<h1 id="一-什么是Redis"><a href="#一-什么是Redis" class="headerlink" title="一.  什么是Redis"></a>一.  什么是Redis</h1><p>Redis是用C语言开发的一个开源的高性能键值对（key-value）数据库，官方提供测试数据，50个并发执行100000个请求,读的速度是110000次/s,写的速度是81000次/s ，且Redis通过提供多种键值数据类型来适应不同场景下的存储需求，目前为止Redis支持的键值数据类型如下：</p>
+<p>1) 字符串类型 string<br>2) 哈希类型 hash<br>3) 列表类型 list<br>4) 集合类型 set<br>5) 有序集合类型 sortedset</p>
+<h1 id="二-redis的应用场景"><a href="#二-redis的应用场景" class="headerlink" title="二. redis的应用场景"></a>二. redis的应用场景</h1><ol>
+<li>缓存（数据查询、短连接、新闻内容、商品内容等等）</li>
+<li>聊天室的在线好友列表</li>
+<li>任务队列。（秒杀、抢购、12306等等）</li>
+<li>应用排行榜</li>
+<li>网站访问统计</li>
+<li>数据过期处理（可以精确到毫秒）</li>
+<li>分布式集群架构中的session分离</li>
+</ol>
+<h1 id="三-下载安装"><a href="#三-下载安装" class="headerlink" title="三. 下载安装"></a>三. 下载安装</h1><ol>
+<li>官网：<a href="https://redis.io" target="_blank" rel="noopener">https://redis.io</a></li>
+<li>中文网：<a href="http://www.redis.net.cn/" target="_blank" rel="noopener">http://www.redis.net.cn/</a></li>
+<li>解压直接可以使用：<ul>
+<li>redis.windows.conf：配置文件</li>
+<li>redis-cli.exe：redis的客户端</li>
+<li>redis-server.exe：redis服务器端</li>
+</ul>
+</li>
+</ol>
+<h1 id="四-命令操作"><a href="#四-命令操作" class="headerlink" title="四. 命令操作"></a>四. 命令操作</h1><h2 id="1-redis的数据结构："><a href="#1-redis的数据结构：" class="headerlink" title="1. redis的数据结构："></a>1. redis的数据结构：</h2><ul>
+<li>redis存储的是：key,value格式的数据，其中key都是字符串，value有5种不同的数据结构</li>
+<li>value的数据结构：<pre><code>![](http://qiniuyun.yegege.xyz/img/2.redis数据结构.bmp)</code></pre>  1)  字符串类型 string<br>  2)  哈希类型 hash ： map格式<br>  3)  列表类型 list ： linkedlist格式。支持重复元素<br>  4)  集合类型 set  ： 不允许重复元素<br>  5)  有序集合类型 sortedset：不允许重复元素，且元素有顺序<h2 id="2-字符串类型-string"><a href="#2-字符串类型-string" class="headerlink" title="2. 字符串类型 string"></a>2. 字符串类型 string</h2></li>
+</ul>
+<ol>
+<li>存储：<code>set key value</code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; set username zhangsan</span><br><span class="line">OK</span><br></pre></td></tr></table></figure></li>
+<li>获取： <code>get key</code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; get username</span><br><span class="line">&quot;zhangsan&quot;</span><br></pre></td></tr></table></figure></li>
+<li>删除： <code>del key</code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; del age</span><br><span class="line">(integer) 1</span><br></pre></td></tr></table></figure>
+<h2 id="3-哈希类型-hash"><a href="#3-哈希类型-hash" class="headerlink" title="3. 哈希类型 hash"></a>3. 哈希类型 hash</h2></li>
+<li>存储：<code>hset key field value</code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; hset myhash username lisi</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; hset myhash password 123</span><br><span class="line">(integer) 1</span><br></pre></td></tr></table></figure></li>
+<li>获取：</li>
+</ol>
+<ul>
+<li><code>hget key field</code>: 获取指定的field对应的值</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; hget myhash username</span><br><span class="line">&quot;lisi&quot;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>hgetall key</code>：获取所有的field和value</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; hgetall myhash</span><br><span class="line">1) &quot;username&quot;</span><br><span class="line">2) &quot;lisi&quot;</span><br><span class="line">3) &quot;password&quot;</span><br><span class="line">4) &quot;123&quot;</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>删除： </li>
+</ol>
+<ul>
+<li><code>hdel key field</code> 删除hash值中的键值对</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; hdel myhash username</span><br><span class="line">(integer) 1</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>del key</code>:删除hash</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; del myhash</span><br><span class="line">(integer) 1</span><br></pre></td></tr></table></figure>
+<h2 id="4-列表类型-list"><a href="#4-列表类型-list" class="headerlink" title="4. 列表类型 list:"></a>4. 列表类型 list:</h2><p>可以添加一个元素到列表的头部（左边）或者尾部（右边）</p>
+<p><img src="http://qiniuyun.yegege.xyz/img/3.%E5%88%97%E8%A1%A8list%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.bmp" alt=""></p>
+<ol>
+<li>添加：<ol>
+<li><code>lpush key value</code>: 将元素加入列表左表</li>
+<li><code>rpush key value</code>：将元素加入列表右边<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; lpush myList a</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; lpush myList b</span><br><span class="line">(integer) 2</span><br><span class="line">127.0.0.1:6379&gt; rpush myList c</span><br><span class="line">(integer) 3</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li>获取： <code>lrange key start end</code> ：范围获取<ul>
+<li><code>lrange myList 0 -1</code>:获取所有<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">127.0.0.1:6379&gt; lrange myList 0 -1</span><br><span class="line">1) &quot;b&quot;</span><br><span class="line">2) &quot;a&quot;</span><br><span class="line">3) &quot;c&quot;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>删除：</li>
+</ol>
+<ul>
+<li><code>lpop key</code>： 删除列表最左边的元素，并将元素返回</li>
+<li><code>rpop key</code>： 删除列表最右边的元素，并将元素返回<h2 id="5-集合类型-set-：-不允许重复元素"><a href="#5-集合类型-set-：-不允许重复元素" class="headerlink" title="5. 集合类型 set ： 不允许重复元素"></a>5. 集合类型 set ： 不允许重复元素</h2></li>
+</ul>
+<ol>
+<li>存储：<code>sadd key value</code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; sadd myset a</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; sadd myset a</span><br><span class="line">(integer) 0</span><br></pre></td></tr></table></figure></li>
+<li>获取：<code>smembers key</code>:获取set集合中所有元素<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; smembers myset</span><br><span class="line">1) &quot;a&quot;</span><br></pre></td></tr></table></figure></li>
+<li>删除：<code>srem key value</code>:删除set集合中的某个元素<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; srem myset a</span><br><span class="line">(integer) 1</span><br></pre></td></tr></table></figure>
+<h2 id="6-有序集合类型-sortedset："><a href="#6-有序集合类型-sortedset：" class="headerlink" title="6. 有序集合类型 sortedset："></a>6. 有序集合类型 sortedset：</h2>不允许重复元素，且元素有顺序.每个元素都会关联一个double类型的分数。redis正是通过分数来为集合中的成员进行从小到大的排序。</li>
+<li>存储：<code>zadd key score value</code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; zadd mysort 60 zhangsan</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; zadd mysort 50 lisi</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; zadd mysort 80 wangwu</span><br><span class="line">(integer) 1</span><br></pre></td></tr></table></figure></li>
+<li>获取：<code>zrange key start end [withscores]</code><ul>
+<li>分数可重新设置<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; zrange mysort 0 -1</span><br><span class="line">1) &quot;lisi&quot;</span><br><span class="line">2) &quot;zhangsan&quot;</span><br><span class="line">3) &quot;wangwu&quot;</span><br><span class="line">4) </span><br><span class="line">127.0.0.1:6379&gt; zrange mysort 0 -1 withscores</span><br><span class="line">1) &quot;zhangsan&quot;</span><br><span class="line">2) &quot;60&quot;</span><br><span class="line">3) &quot;wangwu&quot;</span><br><span class="line">4) &quot;80&quot;</span><br><span class="line">5) &quot;lisi&quot;</span><br><span class="line">6) &quot;500&quot;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>删除：<code>zrem key value</code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; zrem mysort lisi</span><br><span class="line">(integer) 1</span><br></pre></td></tr></table></figure>
+<h2 id="7-通用命令"><a href="#7-通用命令" class="headerlink" title="7. 通用命令"></a>7. 通用命令</h2></li>
+<li><code>keys *</code> : 查询所有的键</li>
+<li><code>type key</code> ： 获取键对应的value的类型</li>
+<li><code>del key</code>：删除指定的key value</li>
+</ol>
+<h1 id="五、持久化"><a href="#五、持久化" class="headerlink" title="五、持久化"></a>五、持久化</h1><h2 id="1-原因："><a href="#1-原因：" class="headerlink" title="1. 原因："></a>1. 原因：</h2><p>redis是一个内存数据库，当redis服务器重启，数据会丢失，我们可以将redis内存中的数据持久化保存到硬盘的文件中。</p>
+<h2 id="2-机制"><a href="#2-机制" class="headerlink" title="2. 机制"></a>2. 机制</h2><h3 id="1-RDB：默认方式，不需要进行配置，默认就使用这种机制"><a href="#1-RDB：默认方式，不需要进行配置，默认就使用这种机制" class="headerlink" title="1. RDB：默认方式，不需要进行配置，默认就使用这种机制"></a>1. RDB：默认方式，不需要进行配置，默认就使用这种机制</h3><p>在一定的间隔时间中，检测key的变化，然后持久化数据</p>
+<ol>
+<li>编辑redis.windows.conf文件</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#   after 900 sec (15 min) if at least 1 key changed</span></span><br><span class="line"><span class="comment"># 十五分钟内至少有一个key改变，保存一次</span></span><br><span class="line">save 900 1</span><br><span class="line"><span class="comment">#   after 300 sec (5 min) if at least 10 keys changed</span></span><br><span class="line"><span class="comment"># 五分钟内至少有10个key改变，保存一次</span></span><br><span class="line">save 300 10</span><br><span class="line"> <span class="comment">#   after 60 sec if at least 10000 keys changed</span></span><br><span class="line"> <span class="comment"># 60秒之后，至少1000个key发生改变，持久化一次</span></span><br><span class="line">save 60 10000</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>通过命令行重新启动redis，<code>redis-server.exe redis.windows.conf</code></li>
+<li>保存的数据文件为.rdb文件</li>
+</ol>
+<h3 id="2-AOF：日志记录，记录每一条命令的操作。每一次命令操作后，持久化数据。"><a href="#2-AOF：日志记录，记录每一条命令的操作。每一次命令操作后，持久化数据。" class="headerlink" title="2. AOF：日志记录，记录每一条命令的操作。每一次命令操作后，持久化数据。"></a>2. AOF：日志记录，记录每一条命令的操作。每一次命令操作后，持久化数据。</h3><ol>
+<li><p>编辑redis.windows.conf文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">appendonly no ---&gt; appendonly yes</span><br><span class="line">默认关闭，改为yes</span><br><span class="line"># appendfsync always 每一次操作都进行持久化</span><br><span class="line">appendfsync everysec 每隔一秒，进行一次持久化 默认</span><br><span class="line"># appendfsync no	不进行持久化</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过命令行重新启动redis，<code>redis-server.exe redis.windows.conf</code></p>
+</li>
+<li><p>数据文件为appendonly.aof</p>
+</li>
+</ol>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -185,36 +329,98 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">JDBC</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">NoSQL</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Redis</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/JDBC//" class="article-tag-list-link color5">JDBC</a>
+        			<a href="/categories/数据库//" class="article-tag-list-link color4">数据库</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2020/04/15/%E7%94%A8Java%E6%93%8D%E4%BD%9CRedis%E6%95%B0%E6%8D%AE%E5%BA%93/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          用Java操作Redis数据库
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2020/04/13/JavaScript%E7%9A%84%E5%AF%B9%E8%B1%A1%E8%A1%A8%E7%A4%BA_JSON/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Javascript的对象表示__JSON</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一-什么是Redis"><span class="toc-number">1.</span> <span class="toc-text">一.  什么是Redis</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二-redis的应用场景"><span class="toc-number">2.</span> <span class="toc-text">二. redis的应用场景</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三-下载安装"><span class="toc-number">3.</span> <span class="toc-text">三. 下载安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#四-命令操作"><span class="toc-number">4.</span> <span class="toc-text">四. 命令操作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-redis的数据结构："><span class="toc-number">4.1.</span> <span class="toc-text">1. redis的数据结构：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-字符串类型-string"><span class="toc-number">4.2.</span> <span class="toc-text">2. 字符串类型 string</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-哈希类型-hash"><span class="toc-number">4.3.</span> <span class="toc-text">3. 哈希类型 hash</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-列表类型-list"><span class="toc-number">4.4.</span> <span class="toc-text">4. 列表类型 list:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-集合类型-set-：-不允许重复元素"><span class="toc-number">4.5.</span> <span class="toc-text">5. 集合类型 set ： 不允许重复元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-有序集合类型-sortedset："><span class="toc-number">4.6.</span> <span class="toc-text">6. 有序集合类型 sortedset：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-通用命令"><span class="toc-number">4.7.</span> <span class="toc-text">7. 通用命令</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#五、持久化"><span class="toc-number">5.</span> <span class="toc-text">五、持久化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-原因："><span class="toc-number">5.1.</span> <span class="toc-text">1. 原因：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-机制"><span class="toc-number">5.2.</span> <span class="toc-text">2. 机制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-RDB：默认方式，不需要进行配置，默认就使用这种机制"><span class="toc-number">5.2.1.</span> <span class="toc-text">1. RDB：默认方式，不需要进行配置，默认就使用这种机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-AOF：日志记录，记录每一条命令的操作。每一次命令操作后，持久化数据。"><span class="toc-number">5.2.2.</span> <span class="toc-text">2. AOF：日志记录，记录每一条命令的操作。每一次命令操作后，持久化数据。</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -237,9 +443,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
