@@ -6,20 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>springboot整合thymeleaf3 | 博客</title>
+  <title>将博客搬至CSDN | 博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="springboot整合thymeleaf thymeleaf3语法">
-<meta property="og:type" content="article">
-<meta property="og:title" content="springboot整合thymeleaf3">
-<meta property="og:url" content="http://yoursite.com/2020/06/15/springboot%E6%95%B4%E5%90%88thmeleaf3/index.html">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="将博客搬至CSDN">
+<meta property="og:url" content="http://yoursite.com/2020/06/16/%E5%B0%86%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%87%B3CSDN/index.html">
 <meta property="og:site_name" content="博客">
-<meta property="og:description" content="springboot整合thymeleaf thymeleaf3语法">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-06-15T10:27:24.000Z">
-<meta property="article:modified_time" content="2020-06-15T09:40:23.270Z">
+<meta property="article:published_time" content="2020-06-16T04:42:04.615Z">
+<meta property="article:modified_time" content="2020-06-16T04:43:07.366Z">
 <meta property="article:author" content="杨烨">
-<meta property="article:tag" content="SpringBoot">
-<meta property="article:tag" content="thymeleaf">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="博客" type="application/atom+xml">
@@ -152,85 +148,27 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-springboot整合thmeleaf3" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-将博客搬至CSDN" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      springboot整合thymeleaf3
+      将博客搬至CSDN
     </h1>
   
 
         
-        <a href="/2020/06/15/springboot%E6%95%B4%E5%90%88thmeleaf3/" class="archive-article-date">
-  	<time datetime="2020-06-15T10:27:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-15</time>
+        <a href="/2020/06/16/%E5%B0%86%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%87%B3CSDN/" class="archive-article-date">
+  	<time datetime="2020-06-16T04:42:04.615Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li>springboot整合thymeleaf</li>
-<li>thymeleaf3语法</li>
-</ul>
- <a id="more"></a>
-<h2 id="springboot整合thymeleaf"><a href="#springboot整合thymeleaf" class="headerlink" title="springboot整合thymeleaf"></a>springboot整合thymeleaf</h2><h3 id="1-导入起步依赖"><a href="#1-导入起步依赖" class="headerlink" title="1. 导入起步依赖"></a>1. 导入起步依赖</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-thymeleaf<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="2-更改引入版本"><a href="#2-更改引入版本" class="headerlink" title="2. 更改引入版本"></a>2. 更改引入版本</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">springboot-thymeleaf.version</span>&gt;</span>3.0.2.RELEASE<span class="tag">&lt;/<span class="name">springboot-thymeleaf.version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">thymeleaf-layout-dialect.version</span>&gt;</span>2.1.1<span class="tag">&lt;/<span class="name">thymeleaf-layout-dialect.version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<ol>
-<li>springboot自带的thymeleaf依赖为2.1.3版本，使用thymeleaf-layout-dialect版本为2以下版本。</li>
-<li>使用3或3以上的thymeleaf时，需要thymeleaf-layout-dialect的版本为2或以上。</li>
-<li>锁定thymeleaf版本时不能使用thymeleaf.version标签，会和springboot内部的依赖标签冲突。应当使用springboot-thymeleaf.version标签来锁定版本。</li>
-</ol>
-</blockquote>
-<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><h3 id="1-替换标签体内容"><a href="#1-替换标签体内容" class="headerlink" title="1. 替换标签体内容"></a>1. 替换标签体内容</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--渲染效果--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>  <span class="attr">th:text</span>=<span class="string">"$&#123;Hello&#125;"</span>&gt;</span>显示欢迎<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--不渲染效果--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>  <span class="attr">th:utext</span>=<span class="string">"$&#123;Hello&#125;"</span>&gt;</span>显示欢迎<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="2-替换属性"><a href="#2-替换属性" class="headerlink" title="2. 替换属性"></a>2. 替换属性</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"div01"</span> <span class="attr">th:id</span>=<span class="string">"$&#123;Hello&#125;"</span> <span class="attr">th:class</span>=<span class="string">"$&#123;Hello&#125;"</span> <span class="attr">th:text</span>=<span class="string">"$&#123;Hello&#125;"</span>&gt;</span>显示欢迎<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"background-color: yellow"</span> <span class="attr">th:style</span>=<span class="string">"'background-color:green'"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="3-在表达式中访问属性域"><a href="#3-在表达式中访问属性域" class="headerlink" title="3. 在表达式中访问属性域"></a>3. 在表达式中访问属性域</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h3</span>&gt;</span>访问属性域<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">th:text</span>=<span class="string">"$&#123;attrRequestScope&#125;"</span>&gt;</span>访问请求域 方式一<span class="tag">&lt;/<span class="name">p</span>&gt;</span>  <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">th:text</span>=<span class="string">"$&#123;#httpServletRequest.getAttribute('attrRequestScope')&#125;"</span>&gt;</span>访问请求域 方式二<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">h3</span>&gt;</span>访问Session域<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">th:text</span>=<span class="string">"$&#123;session.atttrSessionScope&#125;"</span>&gt;</span>访Session域 方式一<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">th:text</span>=<span class="string">"$&#123;application.attrAppSocpe&#125;"</span>&gt;</span>访问Application域 方式一<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="4-解析url地址"><a href="#4-解析url地址" class="headerlink" title="4. 解析url地址"></a>4. 解析url地址</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h3</span>&gt;</span>解析URL地址，获取ContextPath的值<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">th:text</span>=<span class="string">"@&#123;/success&#125;"</span>&gt;</span>@&#123;&#125;是把ContextPath的值附加到指定的地址前<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">th:href</span>=<span class="string">"@&#123;/test&#125;"</span>&gt;</span>@&#123;&#125;是把ContextPath的值附加到指定的地址前<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="5-直接执行表达式"><a href="#5-直接执行表达式" class="headerlink" title="5. 直接执行表达式"></a>5. 直接执行表达式</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h3</span>&gt;</span>直接执行表达式<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>无转义效果 : [[$&#123;attrRequestScope&#125;]] <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>有转义效果 : [($&#123;attrRequestScope&#125;)] <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="6-分支与迭代"><a href="#6-分支与迭代" class="headerlink" title="6. 分支与迭代"></a>6. 分支与迭代</h3><h4 id="1-if-判断"><a href="#1-if-判断" class="headerlink" title="1.  if 判断"></a>1.  if 判断</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h3</span>&gt;</span>if判断字符串是否为空<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">th:if</span>=<span class="string">"$&#123;not #strings.isEmpty(attrRequestScope)&#125;"</span>&gt;</span>attrRequestScope不为空显示<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">~~~<span class="tag">&lt;<span class="name">p</span> <span class="attr">th:if</span>=<span class="string">"$&#123;#strings.isEmpty(attrRequestScope)&#125;"</span>&gt;</span>attrRequestScope为空显示<span class="tag">&lt;/<span class="name">p</span>&gt;</span>~~~~</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-测试循环"><a href="#2-测试循环" class="headerlink" title="2. 测试循环"></a>2. 测试循环</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h3</span>&gt;</span>测试循环<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">th:text</span>=<span class="string">"$&#123;str&#125;"</span> <span class="attr">th:each</span>=<span class="string">"str :$&#123;list&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<ol>
-<li>使用th:each进行集合数据迭代</li>
-<li>th:each=”声明变量:${集合}”</li>
-<li>th:each 用在哪个标签上，哪个标签就会出现多次</li>
-</ol>
-</blockquote>
-<h3 id="7-引入外部代码"><a href="#7-引入外部代码" class="headerlink" title="7.引入外部代码"></a>7.引入外部代码</h3><ol>
-<li><p>要被引入的代码  include/part.html</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">xmlns:th</span>=<span class="string">"http://www.thymeleaf.org"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">th:fragment</span>=<span class="string">"myFirstPart"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">    被包含的内容1111</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">th:fragment</span>=<span class="string">"mySecondPart"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        被包含的内容2222</span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">th:fragment</span>=<span class="string">"myThirdPart"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        被包含的内容3333</span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>需要引入的页面</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">th:insert</span>=<span class="string">"~&#123;include/part :: myFirstPart &#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">th:replace</span>=<span class="string">"~&#123;include/part :: mySecondPart &#125;"</span> <span class="attr">style</span>=<span class="string">"background-color: yellow"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">th:include</span>=<span class="string">"~&#123;include/part ::myThirdPart &#125;"</span> <span class="attr">style</span>=<span class="string">"background-color: red"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>渲染后的页面源码</p>
- <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">            被包含的内容1111</span><br><span class="line">        <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        被包含的内容2222</span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"background-color: red"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        被包含的内容3333</span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<blockquote>
-<ol>
-<li>“ :: “左边的值拼前后缀后必须能够找到要包含的文件。</li>
-<li>“ :: “ 右边的值是代码片段的名字 ，就是th:fragment的值。</li>
-<li>insert将代码原样引入。</li>
-<li>replace使用被引入的代码和属性替换原有的。</li>
-<li>include使用被引入的代码div内部的代码。</li>
-</ol>
-</blockquote>
-
+        <a id="more"></a>
       
 
       
@@ -259,33 +197,7 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">thymeleaf</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/SpringBoot//" class="article-tag-list-link color1">SpringBoot</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
 
       
 
@@ -298,18 +210,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/06/16/%E5%B0%86%E5%8D%9A%E5%AE%A2%E6%90%AC%E8%87%B3CSDN/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          将博客搬至CSDN
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/05/08/%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">代理模式</div>
+    <a href="/2020/06/15/springboot%E6%95%B4%E5%90%88thmeleaf3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">springboot整合thymeleaf3</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -336,7 +239,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#springboot整合thymeleaf"><span class="toc-number">1.</span> <span class="toc-text">springboot整合thymeleaf</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-导入起步依赖"><span class="toc-number">1.1.</span> <span class="toc-text">1. 导入起步依赖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-更改引入版本"><span class="toc-number">1.2.</span> <span class="toc-text">2. 更改引入版本</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#语法"><span class="toc-number">2.</span> <span class="toc-text">语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-替换标签体内容"><span class="toc-number">2.1.</span> <span class="toc-text">1. 替换标签体内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-替换属性"><span class="toc-number">2.2.</span> <span class="toc-text">2. 替换属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-在表达式中访问属性域"><span class="toc-number">2.3.</span> <span class="toc-text">3. 在表达式中访问属性域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-解析url地址"><span class="toc-number">2.4.</span> <span class="toc-text">4. 解析url地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-直接执行表达式"><span class="toc-number">2.5.</span> <span class="toc-text">5. 直接执行表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-分支与迭代"><span class="toc-number">2.6.</span> <span class="toc-text">6. 分支与迭代</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-if-判断"><span class="toc-number">2.6.1.</span> <span class="toc-text">1.  if 判断</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-测试循环"><span class="toc-number">2.6.2.</span> <span class="toc-text">2. 测试循环</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-引入外部代码"><span class="toc-number">2.7.</span> <span class="toc-text">7.引入外部代码</span></a></li></ol></li></ol>
+                    目录，不存在的…
                     </div>
                 </span>
             </div>
