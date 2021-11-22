@@ -1,208 +1,525 @@
 <!DOCTYPE html>
-<html>
-<!--head模块-->
+<html lang="zh-cn">
 
 <head>
-	<meta name="msvalidate.01" content="FA2835F9764159F7F17B04B318F8BDD9" />
-	<!--字符编码-->
-	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-	<!--语言-->
-	<meta http-equiv="Content-Language" contect="zh-CN">
-	<!--移动端适配-->
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-	<!-- 避免IE使用兼容模式 -->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<!--窗口设定-->
-	<meta http-equiv="Window-target" content="_top">
-	<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
-	<meta name="HandheldFriendly" content="true">
-	<!-- 微软的老式浏览器 -->
-	<meta name="MobileOptimized" content="320">
-	<!-- windows phone 点击无高光 -->
-	<meta name="msapplication-tap-highlight" content="no">
-	<!--百度禁止转码-->
-	<meta http-equiv="Cache-Control" content="no-siteapp">
-	<!--浏览器的兼容配置-->
-	<!--Microsoft Internet Explorer-->
-	<!--是否开启cleartype显示效果-->
-	<meta http-equiv="cleartype" content="on">
-	<meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
-	<!--Pinned Site-->
-	<!-- IE 10 / Windows 8 -->
-	<meta name="msapplication-TileImage" content="pinned-tile-144.png">
-	<meta name="msapplication-TileColor" content="#009900">
-	<!--IE 11 / Windows 9.1-->
-	<meta name="msapplication-config" content="ieconfig.xml">
-	<!--Google Chrome-->
-	<!--禁止自动翻译-->
-	<meta name="google" value="notranslate">
-	<!--360浏览器-->
-	<!--极速模式-->
-	<meta name="renderer" content="webkit">
-	<!--QQ手机浏览器-->
-	<!--锁定屏幕在特定方向-->
-	<meta name="x5-orientation" content="portrait">
-	<!-- 全屏显示 -->
-	<meta name="x5-fullscreen" content="true">
-	<!-- 应用模式 -->
-	<meta name="x5-page-mode" content="app">
-	<!--UC浏览器-->
-	<!-- uc强制竖屏 -->
-	<meta name="screen-orientation" content="portrait">
-	<!-- UC强制全屏 -->
-	<meta name="full-screen" content="yes">
-	<!-- UC应用模式 -->
-	<meta name="browsermode" content="application">
-	<!-- 禁止自动探测手机/邮箱号码 -->
-	<meta name="format-detection" content="telphone=no, email=no">
-	<!-- Add to Home Screen添加到主屏 -->
-	<!-- 是否启用 WebApp 全屏模式 -->
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<!-- 设置状态栏的背景颜色,只有在 “apple-mobile-web-app-capable” content=”yes” 时生效 -->
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<!-- 添加到主屏后的标题 -->
-	<meta name="apple-mobile-web-app-title" content="寸头师傅的小屋">
-	<!--Google Android-->
-	<meta name="theme-color" content="#CCFFFF">
-	<!-- 添加到主屏 -->
-	<meta name="mobile-web-app-capable" content="yes">
-	<!--引入核心css-->
-	<link rel="stylesheet" href="heheda/css/main.css" />
-	<!--选择性引入css-->
-	<noscript>
-		<link rel="stylesheet" href="heheda/css/noscript.css" />
-	</noscript>
-	<!--SEO优化-->
-	<!--标题-->
-	<title>「寸头师傅」的小屋！</title>
-	<!--关键词-->
-	<meta name="keywords" content="寸头师傅,个人主页,引导页,导航,博客,音乐,电影,壁纸,解析,源码,教程">
-	<!--描述-->
-	<meta name="description" content="「寸头师傅」的小屋">
-	<!--作者 author-->
-	<meta name="author" content="寸头师傅,imissyou5201314@outlook.com">
-	<!--搜索引擎索引方式-->
-	<meta name="robots" content="all">
-	<!--logo-->
-	<link rel="shortcuticon" href="favicon.ico" />
+
+    <meta name="msvalidate.01" content="FA2835F9764159F7F17B04B318F8BDD9" />
+    <!--字符编码-->
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <!--语言-->
+    <meta http-equiv="Content-Language" contect="zh-CN">
+    <!--移动端适配-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!--窗口设定-->
+    <meta http-equiv="Window-target" content="_top">
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <!-- 微软的老式浏览器 -->
+    <meta name="MobileOptimized" content="320">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!--百度禁止转码-->
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <!--浏览器的兼容配置-->
+    <!--Microsoft Internet Explorer-->
+    <!--是否开启cleartype显示效果-->
+    <meta http-equiv="cleartype" content="on">
+    <meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
+    <!--Pinned Site-->
+    <!-- IE 10 / Windows 8 -->
+    <meta name="msapplication-TileImage" content="pinned-tile-144.png">
+    <meta name="msapplication-TileColor" content="#009900">
+    <!--IE 11 / Windows 9.1-->
+    <meta name="msapplication-config" content="ieconfig.xml">
+    <!--Google Chrome-->
+    <!--禁止自动翻译-->
+    <meta name="google" value="notranslate">
+    <!--360浏览器-->
+    <!--极速模式-->
+    <meta name="renderer" content="webkit">
+    <!--QQ手机浏览器-->
+    <!--锁定屏幕在特定方向-->
+    <meta name="x5-orientation" content="portrait">
+    <!-- 全屏显示 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- 应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <!--UC浏览器-->
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- 禁止自动探测手机/邮箱号码 -->
+    <meta name="format-detection" content="telphone=no, email=no">
+    <!-- Add to Home Screen添加到主屏 -->
+    <!-- 是否启用 WebApp 全屏模式 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 设置状态栏的背景颜色,只有在 “apple-mobile-web-app-capable” content=”yes” 时生效 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- 添加到主屏后的标题 -->
+    <meta name="apple-mobile-web-app-title" content="寸头师傅的小屋">
+    <!--Google Android-->
+    <meta name="theme-color" content="#CCFFFF">
+    <!-- 添加到主屏 -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <!--引入核心css-->
+    <link rel="stylesheet" href="heheda/css/main.css" />
+    <!--选择性引入css-->
+    <noscript>
+        <link rel="stylesheet" href="heheda/css/noscript.css" />
+    </noscript>
+    <!--SEO优化-->
+    <!--标题-->
+    <title>杨烨</title>
+    <!--关键词-->
+    <meta name="keywords" content="杨烨,寸头师傅,个人主页,引导页,导航,博客,音乐,电影,壁纸,解析,源码,教程">
+    <!--描述-->
+    <meta name="description" content="「寸头师傅」的小屋">
+    <!--作者 author-->
+    <meta name="author" content="寸头师傅,imissyou5201314@outlook.com">
+    <!--搜索引擎索引方式-->
+    <meta name="robots" content="all">
+    <!--logo-->
+    <link rel="shortcuticon" href="favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
+    />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="email=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="renderer" content="webkit">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/typo.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <script>
+        function loading2() {
+            document.getElementsByClassName('avatar')[0].style.display = 'block';
+            document.getElementsByClassName('loading')[0].style.display = 'none';
+        }
+    </script>
 </head>
 
-<body class="is-loading">
-	<!-- Wrapper -->
-	<div id="wrapper">
-		<!-- Main -->
-		<section id="main">
-			<!--header模块-->
-			<header>
-				<!--头像-->
-				<span class="avatar"><img src="./heheda/image/head.png"
-						alt="2585649532" /></span>
-				<!--内容-->
-				<a href="https://www.cuntoushifu.com">
-					<h1>寸头师傅</h1>
-				</a>
-				<p>欢迎来到我的小屋！</p>
-			</header>
-			<!--footer模块-->
-			<footer>
-				<!--上部导航-->
-				<a href="./djs/index.html" class="fa fa-clock-o" target="_blank>">欢迎页</a>
-				<a>|</a>
-				<a href="https://jqby.ahdx.top" class="fa fa-users" target="_blank>">新华机器博弈</a>
-				<a>|</a>
-				<a href="https://www.cuntoushifu.com/rss" class="fa fa-rss" target="_blank>">RSS</a>
-				<!--换行符占位，用于页面排版-->
-				<br /><br />
-				<!--中部导航-->
-				<ul class="icons">
-					<li><a href="https://www.cuntoushifu.com" class="fa fa-globe" target="_blank>"></a>博客</li>
-					<li><a href="https://github.com/cuntoushifu" class="fa fa-github" target="_blank>"></a>GitHub</li>
-					<li><a href="https://gitee.com/cuntoushifu" class="fa fa-gitlab" target="_blank>"></a>码云</li>
-					<li><a href="https://jq.qq.com/?_wv=1027&k=eAN5sjZH" class="fa fa-comments-o" target="_blank>"></a>Q群</li>
-					<li><a href="http://gogs.ahdx.top" class="fa fa-cogs" target="_blank>"></a>Gogs</li>
-					<li><a href="./dm/index.html" class="fa fa-music" target="_blank>"></a>歌单</li>
-					<!-- <li><a href="http://pan.ahdx.top/?/images" class="fa fa-file-image-o" target="_blank>"></a>图床</li> -->
-				</ul>
-				<!--联系方式-->
-				<a href="http://wpa.qq.com/msgrd?v=3&uin=1959368673&site=qq&menu=yes" class="fa fa-qq"
-					target="_blank>">QQ</a>
-				<a>|</a>
-				<a href="404.html" class="fa fa-weixin" target="_blank>">微信</a>
-				<a>|</a>
-				<a href="" class="fa fa-weibo" target="_blank>">微博</a>
-				<a>|</a>
-				<a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=l-T48-Lu9vnw1_H_57nm5rn0_Po"
-					class="fa fa-envelope" target="_blank>">邮箱</a>
- 
-			</footer>
-	<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=536622304&auto=1&height=32"></iframe>
+<body>
 
-		</section>
-		<!-- Footer -->
-		<footer id="footer">
-			<ul class="copyright">
-				<!--IP信息模块-->
-				<li>您的IP：
-					<script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
-					<script type="text/javascript">
-						document.write(returnCitySN["cip"])
-					</script>
-				</li>
-				<li>您的节点：
-					<script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
-					<script type="text/javascript">
-						document.write(returnCitySN["cid"])
-					</script>
-				</li>
-				<!--位置信息模块-->
-				<li>您的位置：
-					<script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
-					<script type="text/javascript">
-						document.write(returnCitySN["cname"])
-					</script>
-				</li>
-			</ul>
-			<!--版权信息，请勿修改！-->
-			<a target="_blank" href="https://www.cuntoushifu.com">寸头师傅</a>&nbsp;&copy;&nbsp;版权所有
-		</footer>
-	</div>
-	<script>
-		if ('addEventListener' in window) {
-			window.addEventListener('load', function () {
-				document.body.className = document.body.className.replace(/\bis-loading\b/, '');
-			});
-			document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
-		}
-	</script>
-	<!--落叶效果-->
-	<script src="heheda/js/jquery.min.js"></script>
-	<script src="heheda/js/su.js"></script>
-	<script type="text/javascript">
-		jQuery(document).ready(function ($) {
-			$('body').wpSuperSnow({
-				flakes: ['heheda/image/007.png', 'heheda/image/006.png', 'heheda/image/004.png',
-					'heheda/image/005.png', 'heheda/image/001.png', 'heheda/image/003.png',
-					'heheda/image/002.png', 'heheda/image/008.png'
-				],
-				totalFlakes: '100',
-				zIndex: '999999',
-				maxSize: '30',
-				maxDuration: '20',
-				useFlakeTrans: false
-			});
-		});
-	</script>
-	<!--动态背景特效-->
-	<script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-2" count="200"
-		src="heheda/js/canvas-nest.min.js"></script>
-	<!-- 禁止右键和禁止选中文字 -->
+    <header class="header"></header>
 
-	<body onselectstart="return false" oncontextmenu=self.event.returnValue=false></body>
-	<!-- 背景音乐代码 -->
-	<!-- <audio autoplay="autopaly" loop="loop" src="http://music.163.com/song/media/outer/url?id=536622304.mp3" type="audio/mpeg" /> -->
-	<!-- <audio autoplay="autopaly" loop="loop" src="http://m10.music.126.net/20210221213722/e7947b3255ceb7f9ff8b97908343277a/ymusic/6eed/4ef2/d8ae/b85b958a70552f7e002e33d35075086c.mp3" type="audio/mpeg" />
-	</audio> -->
+    <article class="container">
+        <section class="side" id="side">
 
+            <!-- 左栏固定开关，记得及时删除这段代码 Start-->
+            <label class="switch" style="display: none;" onchange="switchFixed()">
+                <script type="text/javaScript">
+                    function switchFixed(){
+                        var value = document.getElementById('side').style.position === 'fixed' ? 'absolute' : 'fixed';
+                        document.getElementById('side').style.position = value;
+                    }
+                </script>
+                <input id="cb" type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <style>
+                @media (min-width: 	750px){
+                    .switch{position:relative;display:inline-block!important;width:60px;height:34px;}
+                    .switch input{display:none;}
+                    .slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background-color:#ccc;-webkit-transition:.4s;transition:.4s;}
+                    .slider:before{position:absolute;content:"";height:26px;width:26px;left:4px;bottom:4px;background-color:white;-webkit-transition:.4s;transition:.4s;}
+                    input:checked + .slider{background-color:#1abc9c;}
+                    input:focus + .slider{box-shadow:0 0 1px #1abc9c;}
+                    input:checked + .slider:before{-webkit-transform:translateX(26px);-ms-transform:translateX(26px);transform:translateX(26px);}.slider.round{border-radius:34px;}
+                    .slider.round:before{border-radius:50%;}
+                }
+            </style>
+            <!-- 左侧固定开关，记得及时删除这段代码 End-->
+
+            <!-- 个人肖像 -->
+            <section class="me">
+                <section class="portrait">
+                    <div class="loading">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- 头像照片 -->
+                    <img class="avatar" src="assets/images/avatar.png" onload="loading2()">
+                </section>
+
+                <h1 class="name">杨烨</h1>
+                <h4 class="info-job">Java开发工程师 / 芜湖</h4>
+
+            </section>
+
+            <!-- 基本信息 -->
+            <section class="profile info-unit">
+                <h2>
+                    <i class="fa fa-user" aria-hidden="true"></i>基本信息</h2>
+                <hr/>
+                <ul>
+                    <li>
+                        <label>个人信息</label>
+                        <span>杨烨 / 男 / 22岁</span>
+                    </li>
+                    <li>
+                        <label>英语水平</label>
+                        <span>CET-4</span>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- 联系方式 -->
+            <section class="contact info-unit">
+                <h2>
+                    <i class="fa fa-phone" aria-hidden="true"></i>联系方式</h2>
+                <hr/>
+                <ul>
+                    <!--<li>
+                        <label>手机</label>
+                        <a href="tel:15168285219" target="_blank">151-6828-5219</a>
+                    </li>-->
+                    <li>
+                        <label>邮箱：</label><br>
+                        <a href="mailto:imissyou5201314@outlook.com" target="_blank">imissyou5201314@outlook.com</a>
+                    </li>
+                    <li>
+                        <label>个人主页：</label><br>
+                        <a href="http://www.cuntoushifu.com/" target="_blank">http://www.cuntoushifu.com</a>
+                    </li>
+                    <li>
+                        <label>Github:</label><br>
+                        <a href="https://github.com/cuntoushifu" target="_blank">https://github.com/cuntoushifu</a>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- 技能点 -->
+            <section class="skill info-unit">
+                <h2>
+                    <i class="fa fa-code" aria-hidden="true"></i>技能点</h2>
+                <hr/>
+                <ul>
+                    <li>
+                        <label>Java</label>
+                        <progress value="90" max="100"></progress>
+                    </li>
+                    <li>
+                        <label>SpringBoot</label>
+                        <progress value="85" max="100"></progress>
+                    </li>
+                    <li>
+                        <label>Mybatis</label>
+                        <progress value="85" max="100"></progress>
+                    </li>
+                    <li>
+                        <label>JPA</label>
+                        <progress value="85" max="100"></progress>
+                    </li>
+                    <li>
+                        <label>Thymeleaf</label>
+                        <progress value="70" max="100"></progress>
+                    </li>
+                    <li>
+                        <label>Vue</label>
+                        <progress value="70" max="100"></progress>
+                    </li>
+                    <li>
+                        <label>Linux</label>
+                        <progress value="70" max="100"></progress>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="qrcode info-unit">
+        <!--        <h2><i class="fa fa-qrcode" aria-hidden="true"></i>二维码</h2>
+                <hr/>
+                <img src="/assets/images/blog.png" style="width: 100%;" alt="">-->
+            </section>
+
+            <!-- 技术栈 -->
+<!--            <div class="stack info-unit">
+                    <h2><i class="fa fa-code" aria-hidden="true"></i>其他</h2>
+                    <hr/>
+                    <ul>
+                        <li>
+                            <label>前端</label>
+                            <span>JavaScript、jQuery、Vue、Bootstrap、ElementUI</span>
+                        </li>
+                        <li>
+                            <label>后端</label>
+                            <span>Java</span>
+                        </li>
+                        <li>
+                            <label>其他</label>
+                            <span>Git、SVN、Markdown</span>
+                        </li>
+                    </ul>
+                </div>-->
+        </section>
+
+        <section class="main">
+
+            <!-- 教育经历 -->
+            <section class="edu info-unit">
+                <h2>
+                    <i class="fa fa-graduation-cap" aria-hidden="true"></i>教育经历</h2>
+                <hr/>
+                <ul>
+                    <li>
+                        <h3>
+                            <span>安徽新华学院 - 软件工程（本科）</span>
+                            <time>2018.9-2022.7</time>
+                        </h3>
+                        <p><!--专业排名
+                            <mark>X/XX</mark>，-->
+                            期间取得软件著作权《基于智能分类的大学生技术交流平台》，获“安徽省计算机博弈大赛”三等奖2次。</p>
+                    </li>
+                   <!-- <li>
+                        <h3>
+                            <span>XXXX大学 - XXX专业（本科）</span>
+                            <time>201X.9-201X.7</time>
+                        </h3>
+                        <p>专业排名
+                            <mark>X/XX</mark>，期间发表国内核心期刊文章X篇，三等奖学金X次。</p>
+                    </li>-->
+                </ul>
+            </section>
+
+            <!-- 工作经历 -->
+      <!--      <section class="work info-unit">
+                <h2>
+                    <i class="fa fa-shopping-bag" aria-hidden="true"></i>工作经历</h2>
+                <hr/>
+                <ul>
+                    <li>
+                        <h3>
+                            <span>学校校园网中心－维护（实习）</span>
+                            <time>2016.X 至 2017.X</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>深度参与XX项目迭代XX的前端开发工作，独立承担并完成XX、XX、XXXX等功能点的开发，主要维护并修复XX、XX、XX等功能点bug若干。项目采用技术栈
+                                <mark>React+React Router+Node.js+SASS</mark>，实现
+                                <mark>前后端完全分离</mark>。</li>
+                            <li>配合UI和后端，根据产品需求提供H5页面嵌入到后台模板，要求
+                                <mark>移动端显示正常</mark>。</li>
+                            <li>主要参与XXXXXXX的静态页面开发工作，要求
+                                <mark>在支付宝环境下完全兼容</mark>。</li>
+                        </ul>
+                    </li>
+                  &lt;!&ndash;  <li>
+                        <h3>
+                            <span>[经历2]XX－前端开发工程师（实习）</span>
+                            <time>20XX.10-20XX.7</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>深度参与公司主线产品「XXXX」的前端开发工作，完成帖子快捷回复、
+                                <mark>全站图片懒加载</mark>、活动banner、帖子管理（使用Yii框架）等功能。项目采用技术栈phpWind+NAMP。
+                                <a href="http://itsay.tech/162/" target="_blank">
+                                    <i class="fa fa-link" aria-hidden="true"></i>博客文章</a>。</li>
+                            <li>主要参与公司产品「XXXX」的前端开发工作，实现接入微博、微信、QQ等
+                                <mark>第三方账号登录</mark>等功能。项目采用技术栈WordPress+NAMP。</li>
+                            <li>活动页面的开发（七夕活动、抽奖活动以及承接外包页面）。</li>
+                            <li>论坛
+                                <mark>图片增量备份</mark>（CentOS+vsftpd+crontab）
+                                <a href="#" target="_blank">
+                                    <i class="fa fa-link" aria-hidden="true"></i>博客文章</a>。</li>
+                        </ul>
+                    </li>&ndash;&gt;
+                </ul>
+            </section>-->
+            <br> <br>
+            <!-- 项目经验 -->
+            <section class="project info-unit">
+                <h2>
+                    <i class="fa fa-terminal" aria-hidden="true"></i>个人项目</h2>
+                <hr/>
+                <ul>
+                    <br>
+                    <li>
+                        <h3>
+                            <span>[项目1]新华机器博弈论坛</span>
+                       <!--     <span class="link">
+                                <a href="#" target="_blank">Demo</a>
+                            </span>-->
+                            <time>2021.3-2021.5</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>技术栈：PringBoot+Mybatis-Plus+Thymeleaf+Docker+MySQL</li>
+                            <li>
+                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                [目标]完成集博客、问答、吐槽、个人中心和后台管理功能的多租户论坛并部署
+                                <br/>
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                [团队]同 2 位同专业同学一起
+                                <br/>
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                                [贡献]完成从
+                                <mark>“调研-设计-实现-上线”</mark>等工作，主要负责系统原型、功能框架及数据提交流程、数据库设计、系统开发以及系统部署上线等工作
+                                <br/>
+                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                [效果]作品最终申请软件著作权、作为大创成果结项</li>
+                        </ul>
+                    </li>
+                    <br>
+                    <li>
+                        <h3>
+                            <span>[项目2]基于SpringBoot的个人博客系统</span>
+                          <!--  <span class="link">
+                                <a href="#" target="_blank">Demo</a>
+                            </span>-->
+                            <time>2020.8.-2020.12</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>技术栈：SpringBoot+SpringDataJPA+Redis+SpringCache+Thymeleaf+Docker+MySQL</li>
+                            <li>
+                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                [目标]实现文章、分类、标签、评论和后台管理功能
+                   <!--             <br/>
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                [团队]与 1 位同学-->
+                                <br/>
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                                [贡献]分析项目需求、开发项目、部署和上线项目
+                                <!--   <br/>
+
+                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                [效果]作品取得第二届共享杯国家级竞赛“特等奖”(1/1500)-->
+                            </li>
+                        </ul>
+                    </li>
+                    <br>
+                    <li>
+                        <h3>
+                            <span>[项目3]爱恩斯坦棋博弈算法</span>
+                       <!--     <span class="link">
+                                <a href="#" target="_blank">Demo</a>
+                            </span>-->
+                            <time>2020.6-2021.9</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>技术栈：Java、计算机博弈、蒙特卡洛搜索算法、UCT算法</li>
+                            <li>
+                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                [目标]实现爱恩斯坦棋博弈算法
+                                <br/>
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                [团队]与 2位同学
+                                <br/>
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                                [贡献]实现搜索博弈树，基于
+                                <mark>UCT</mark> 和
+                                <mark>多线程技术</mark> 实现博弈算法，根据对弈结果对蒙特卡洛模拟搜索的劣势进行处理
+                                <br/>
+                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                [效果]作品连续两年取得“安徽省计算机博弈大赛”三等奖
+                            </li>
+                        </ul>
+                    </li>
+<!--                    <li>-->
+<!--                        <h3>-->
+<!--                            <span>[项目4]肿瘤流行病数据可视化</span>-->
+<!--                            <span class="link">-->
+<!--                                <a href="#" target="_blank">Demo</a>-->
+<!--                            </span>-->
+<!--                            <time>201X.X-201X.X</time>-->
+<!--                        </h3>-->
+<!--                        <ul class="info-content">-->
+<!--                            <li>技术栈：HTML 5+D3.js+ECharts+MySQL</li>-->
+<!--                            <li>-->
+<!--                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>-->
+<!--                                [目标]实现常见肿瘤流行病数据多维度可视化展示、数据透视及分析-->
+<!--                                <br/>-->
+<!--                                <i class="fa fa-users" aria-hidden="true"></i>-->
+<!--                                [团队]与 1 位-->
+<!--                                <br/>-->
+<!--                                <i class="fa fa-bars" aria-hidden="true"></i>-->
+<!--                                [贡献]分析项目需求，清洗并整理相关数据(扩展第三方知识组织系统和 Google trends 数据)，并用-->
+<!--                                <mark>D3.js</mark> 和-->
+<!--                                <mark>ECharts</mark> 进行图形化展示以及实现简易自动分析 功能-->
+<!--                                <br/>-->
+<!--                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>-->
+<!--                                [效果]作品取得第二届共享杯国家级竞赛“特等奖”(1/1500)-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                    </li>-->
+
+                </ul>
+            </section>
+            <br> <br>
+            <!-- 自我评价 -->
+            <section class="work info-unit">
+                <h2>
+                    <i class="fa fa-pencil" aria-hidden="true"></i>自我评价/期望</h2>
+                <hr/>
+                <p>
+                    <br>
+                    <span class="mark-txt">”乐于助人“</span>本科在校期间,带领近100名学弟学妹学习Java编程知识,参加职业技能比赛</p>
+                <br>
+                <span class="mark-txt">“技术宅”</span>组装实体机安装群晖、UNAS和OMV等系统，在内网环境部署docker、aria2等环境</p>
+            </section>
+        </section>
+    </article>
+
+    <br>
+    <br> <br> <br> <br> <br>
+<!--    <footer class="footer">
+        <p>© 2021 杨烨.文档最后更新时间为
+            <time>2021年11月22日</time>.</p>
+    </footer>-->
+
+    <footer class="footer" id="footer">
+        <ul class="copyright">
+            <!--IP信息模块-->
+            <li>您的IP：
+                <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+                <script type="text/javascript">
+                    document.write(returnCitySN["cip"])
+                </script>
+            </li>
+            <li>您的节点：
+                <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+                <script type="text/javascript">
+                    document.write(returnCitySN["cid"])
+                </script>
+            </li>
+            <!--位置信息模块-->
+            <li>您的位置：
+                <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+                <script type="text/javascript">
+                    document.write(returnCitySN["cname"])
+                </script>
+            </li>
+        </ul>
+        <!--版权信息，请勿修改！-->
+        <p>
+        <a target="_blank" href="https://www.cuntoushifu.com">寸头师傅</a><!--&nbsp;&copy;&nbsp;版权所有-->
+        </p>
+    </footer>
+    <br>
+    <br>    <br>
+    <!-- 侧栏 -->
+<!--    <aside>
+        <ul>
+            <li>
+                <a href="https://gitee.com/cuntoushifu/resume" target="_blank">源代码</a>
+            </li>
+            <li>
+                <a href="http://www.cuntoushifu.com/" target="_blank">Blog</a>
+            </li>
+        </ul>
+    </aside>-->
+
+    <script src="./assets/js/index.js"></script>
 </body>
 
 </html>
