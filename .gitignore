@@ -7,5 +7,6 @@
 out
 gen
 
-/.idea/
+/.idea
+/*.iml
 
