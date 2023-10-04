@@ -1,508 +1,232 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
-
-<head>
-
-    <meta charset="UTF-8">
-    <!--字符编码-->
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-    <!--语言-->
-    <meta http-equiv="Content-Language" contect="zh-CN">
-    <!--移动端适配-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
- 
-    <!--引入核心css-->
-    <!--SEO优化-->
-    <!--标题-->
-    <title>杨烨</title>
-    <!--关键词-->
-    <meta name="keywords" content="杨烨,寸头师傅,个人主页,简历,yangye，杨烨的个人简历">
-    <!--描述-->
-    <meta name="description" content="杨烨的个人简历">
-    <!--作者 author-->
-    <meta name="author" content="杨烨,imissyou5201314@outlook.com">
-
-    <!--logo-->
-    <link rel="shortcuticon" href="favicon.ico"/>
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
-    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
-    <meta name="format-detection" content="email=no"/>
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <meta name="format-detection" content="telephone=no"/>
-    <meta name="renderer" content="webkit">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
-    <meta http-equiv="Pragma" content="no-cache"/>
-    <meta http-equiv="Expires" content="0"/>
-
-    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="assets/css/typo.css">
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/index.css">
-    <script>
-        function loading2() {
-            document.getElementsByClassName('avatar')[0].style.display = 'block';
-            document.getElementsByClassName('loading')[0].style.display = 'none';
-        }
-    </script>
-	<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?635d5372f667c566e2591a89895713ab";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-
-</head>
-
-<body>
-
-<header class="header"></header>
-
-<article class="container">
-    <section class="side" id="side">
-
-        <!-- 左栏固定开关，记得及时删除这段代码 Start-->
-        <label class="switch" style="display: none;" onchange="switchFixed()">
-            <script type="text/javaScript">
-                function switchFixed() {
-                    var value = document.getElementById('side').style.position === 'fixed' ? 'absolute' : 'fixed';
-                    document.getElementById('side').style.position = value;
-                }
-            </script>
-            <input id="cb" type="checkbox">
-            <span class="slider round"></span>
-        </label>
-        <style>
-            @media (min-width: 750px) {
-                .switch {
-                    position: relative;
-                    display: inline-block !important;
-                    width: 60px;
-                    height: 34px;
-                }
-
-                .switch input {
-                    display: none;
-                }
-
-                .slider {
-                    position: absolute;
-                    cursor: pointer;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    background-color: #ccc;
-                    -webkit-transition: .4s;
-                    transition: .4s;
-                }
-
-                .slider:before {
-                    position: absolute;
-                    content: "";
-                    height: 26px;
-                    width: 26px;
-                    left: 4px;
-                    bottom: 4px;
-                    background-color: white;
-                    -webkit-transition: .4s;
-                    transition: .4s;
-                }
-
-                input:checked + .slider {
-                    background-color: #1abc9c;
-                }
-
-                input:focus + .slider {
-                    box-shadow: 0 0 1px #1abc9c;
-                }
-
-                input:checked + .slider:before {
-                    -webkit-transform: translateX(26px);
-                    -ms-transform: translateX(26px);
-                    transform: translateX(26px);
-                }
-
-                .slider.round {
-                    border-radius: 34px;
-                }
-
-                .slider.round:before {
-                    border-radius: 50%;
-                }
-            }
-        </style>
-        <!-- 左侧固定开关，记得及时删除这段代码 End-->
-
-        <!-- 个人肖像 -->
-        <section class="me">
-            <section class="portrait">
-                <div class="loading">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Resume - Start Bootstrap Theme</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Clarence Taylor</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="..." /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- About-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        杨
+                        <span class="text-primary">烨</span>
+                    </h1>
+                    <div class="subheading mb-5">
+                        www.cuntoushifu.com·
+                        <a href="mailto:imissyou5201314@outlook.com">imissyou5201314@outlook.com</a>
+                    </div>
+                    <p class="lead mb-5">不会做黄焖鸡的程序员不是一个合格的新东方研究生</p>
+                    <div class="social-icons">
+                        <a class="social-icon" href="//cuntoushifu.com" target="_blank"><i class="fas fa-blog"></i></a>
+                        <a class="social-icon" href="//github.com/cuntoushifu" target="_blank"><i class="fab fa-github"></i></a>
+                        <a class="social-icon" href="#!"><i class="fab fa-zhihu"></i></a>
+                        <a class="social-icon" href="#!"><i class="fas fa-envelope"></i></a>
+                    </div>
                 </div>
-                <!-- 头像照片 -->
-                <img class="avatar" src="assets/images/avatar.png" onload="loading2()">
             </section>
-
-            <h1 class="name">杨烨</h1>
-            <h4 class="info-job">研究生 </h4>
-
-        </section>
-
-        <!-- 基本信息 -->
-        <section class="profile info-unit">
-            <h2>
-                <i class="fa fa-user" aria-hidden="true"></i>基本信息</h2>
-            <hr/>
-            <ul>
-                <li>
-                    <label>个人信息</label>
-                    <span>杨烨 / 男 </span>
-                </li>
-
-            </ul>
-        </section>
-
-        <!-- 联系方式 -->
-        <section class="contact info-unit">
-            <h2>
-                <i class="fa fa-phone" aria-hidden="true"></i>联系方式</h2>
-            <hr/>
-            <ul>
-<!--                <li>-->
-<!--                    <label>手机(微信)：</label>-->
-<!--                    <a href="tel:19955379653" target="_blank">19955379653</a>-->
-<!--                </li>-->
-                <li>
-                    <label>邮箱：</label><br>
-                    <a href="mailto:imissyou5201314@outlook.com" target="_blank">imissyou5201314@outlook.com</a>
-                </li>
-                <li>
-                    <label>博客：</label><br>
-                    <a href="https://www.cuntoushifu.com/" target="_blank">https://www.cuntoushifu.com</a>
-                </li>
-                <li>
-                    <label>Github:</label><br>
-                    <a href="https://github.com/cuntoushifu" target="_blank">https://github.com/cuntoushifu</a>
-                </li>
-
-            </ul>
-        </section>
-
-        <!-- 技能点 -->
-        <!--
-        <section class="skill info-unit">
-            <h2>
-                <i class="fa fa-code" aria-hidden="true"></i>技能点</h2>
-            <hr/>
-            <ul>
-                <li>
-                    <label>Java</label>
-                    <progress value="90" max="100"></progress>
-                </li>
-                <li>
-                    <label>SpringBoot</label>
-                    <progress value="85" max="100"></progress>
-                </li>
-                <li>
-                    <label>Mybatis</label>
-                    <progress value="85" max="100"></progress>
-                </li>
-                <li>
-                    <label>JPA</label>
-                    <progress value="85" max="100"></progress>
-                </li>
-                <li>
-                    <label>Thymeleaf</label>
-                    <progress value="70" max="100"></progress>
-                </li>
-                <li>
-                    <label>Vue</label>
-                    <progress value="70" max="100"></progress>
-                </li>
-                <li>
-                    <label>Linux</label>
-                    <progress value="70" max="100"></progress>
-                </li>
-            </ul>
-        </section>
-        -->
-        <!-- <section class="qrcode info-unit">
-            <h2><i class="fa fa-qrcode" aria-hidden="true"></i>微信</h2>
-            <hr/>
-            <img src="/assets/images/wx.png" style="width: 100%;" alt="微信二维码">
-
-        </section> -->
-        <section class="qrcode info-unit">
-            <h2><i class="fa fa-qrcode" aria-hidden="true"></i>微信小程序</h2>
-            <hr/>
-            <img src="/assets/images/wx2.jpg" style="width: 100%;" alt="微信小程序">
-        </section>
-
-        <section class="qrcode info-unit">
-            <!--        <h2><i class="fa fa-qrcode" aria-hidden="true"></i>二维码</h2>
-                    <hr/>
-                    <img src="/assets/images/blog.png" style="width: 100%;" alt="">-->
-        </section>
-
-        <!-- 技术栈 -->
-        <!--            <div class="stack info-unit">
-                            <h2><i class="fa fa-code" aria-hidden="true"></i>其他</h2>
-                            <hr/>
-                            <ul>
-                                <li>
-                                    <label>前端</label>
-                                    <span>JavaScript、jQuery、Vue、Bootstrap、ElementUI</span>
-                                </li>
-                                <li>
-                                    <label>后端</label>
-                                    <span>Java</span>
-                                </li>
-                                <li>
-                                    <label>其他</label>
-                                    <span>Git、SVN、Markdown</span>
-                                </li>
-                            </ul>
-                        </div>-->
-    </section>
-
-    <section class="main">
-
-        <!-- 教育经历 -->
-        <section class="edu info-unit">
-            <h2>
-                <i class="fa fa-graduation-cap" aria-hidden="true"></i>教育经历</h2>
-            <hr/>
-            <!--    <ul>
-             <li>
-                     <h3>
-                         <span>XXXX大学 - XXX专业（本科）</span>
-                         <time>201X.9-201X.7</time>
-                     </h3>
-                     <p>专业排名
-                         <mark>X/XX</mark>，期间发表国内核心期刊文章X篇，三等奖学金X次。</p>
-                 </li>
-            </ul>
--->
-            <ul>
-                <li>
-                    <h3>
-                        <span>安徽新华学院 - 软件工程（本科）</span>
-                        <time>2018.9-2022.7</time>
-                    </h3>
-
-                </li>
-            </ul>
-        </section>
-        <br>
-        <section class="edu info-unit">
-            <h2>
-                <i class="fa fa-trophy" aria-hidden="true"></i>获奖情况</h2>
-            <hr/>
-                    <ul class="info-content">
-                        <li>软件著作权《基于智能分类的大学生技术交流平台》</li>
-                        <li>2020、2021年“安徽省计算机博弈大赛”爱恩斯坦棋组三等奖</li>
-                        <li>2021年创新训练项目《基于智能推荐的Code社交系统》（已结项，编号：202112216066）</li>
-                        <li>2022年本科优秀毕业论文《UCT算法在爱恩斯坦棋博弈中的研究与改进》</li>
+            <hr class="m-0" />
+            <!-- Experience-->
+            <section class="resume-section" id="experience">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Experience</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">店长 & 厨子 & 大堂经理 & 保安 & 会计</h3>
+                            <div class="subheading mb-3">黄焖鸡米饭</div>
+                            <p>精选皖南土鸡，农户散养，品质至上。我是一名热爱烹饪和美食的人，也是黄焖鸡的忠实粉丝。几年前，我决定将自己的激情变成事业，于是创立一家黄焖鸡米饭。致力于将最美味的黄焖鸡呈现给我们的客户。</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">2020.1 - 2021.7</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">开发工程师&实施工程师&运维工程师</h3>
+                            <div class="subheading mb-3">多家单位</div>
+                            <p>承接多家公司的门户网站，小程序设计开发上线。</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">2021.9 - 2022.12</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">数字化专员&运维工程师&实施工程师</h3>
+                            <div class="subheading mb-3">安徽省鲁班建设投资股份有限公司</div>
+                            <p>公司近600台主机、交换机、路由器、摄像头、录像机的软硬件安装运维。 海康威视监控中台、新中大ERP、农业板块的物联网系统&设备的上线、安装、运维。 集团职能部门及下属公司的线上业务流程制定修改。</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">2023.1 - 2023.7</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">实习生</h3>
+                            <div class="subheading mb-3">江苏思远集成电路与智能制造研究院有限公司</div>
+                            <p>在孙老师和公司的工程师的指导下，学习了机器学习的基础知识和前端编程的框架，参与了西藏移动公众号服务器的升级维护，参与了孙老师主持的国家重点研发计划与陕西省重点研发计划项目，其中针对国家重点研发计划《跨境贸易协同服务技术研究》进行了深入的调研与组会交流，确定了研究方向为基于多式联运的跨境贸易知识图谱技术研究</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">2023.7 - 2023.9</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Education-->
+            <section class="resume-section" id="education">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Education</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">安徽新华学院</h3>
+                            <div class="subheading mb-3">Bachelor of Science</div>
+                            <div>软件工程</div>
+                            <p>GPA: **</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">2018.9 - 2022.7</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">上海电机学院</h3>
+                            <div class="subheading mb-3">Master of Engineering</div>
+                            <div>电子信息-计算机技术</div>
+                            <p>GPA: **</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">2023.9-现今</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Skills-->
+            <section class="resume-section" id="skills">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Skills</h2>
+                    <div class="subheading mb-3">Programming Languages & Tools</div>
+                    <ul class="list-inline dev-icons">
+                        <li class="list-inline-item"><i class="fab fa-html5"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-angular"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-react"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-node-js"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-sass"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-less"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-linux"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-gulp"></i></li>
+                        <li class="list-inline-item"><i class="fas fa-database"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-npm"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-java"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-vuejs"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-python"></i></li>
                     </ul>
-
-        </section>
-
-        <br>
-
-        <section class="edu info-unit">
-            <h2>
-                <i class="fa fa-list-alt" aria-hidden="true"></i>技能清单</h2>
-            <hr/>
-                    <ul class="info-content">
-                        <li>C，Java等编程语言的使用</li>
-                        <li>使用SpringBoot，Mybatis，SpringJPA进行项目开发</li>
-                        <li>SpringCloud组件的使用</li>
-                        <li>MySQL数据库在Windows&linux下的安装配置使用，以及SQL语言的编写以及在项目中使用</li>
-                        <li>redis数据库的安装配置，以及在项目中使用</li>
-                        <li>在云服务器上部署JavaWEB项目，相关软件环境的配置</li>
-                        <li>Docker的安装配置使用，以及使用dockerfile构建docker镜像</li>
-                    </ul>
-
-        </section>
-
-        <br>
-
-        <section class="project info-unit">
-            <h2>
-                <i class="fa fa-terminal" aria-hidden="true"></i>项目经验</h2>
-            <hr/>
-            <ul>
-
-                <li>
-                    <h3>
-                        <span>[项目1]新华机器博弈论坛</span>
-                        <span class="link">
-                                 <a href="https://github.com/cuntoushifu/jqby" target="_blank">Demo</a>
-                             </span>
-                        <time>2021.3-2021.5</time>
-                    </h3>
-                    <ul class="info-content">
-                        <li>技术栈：SpringBoot+Mybatis-Plus+Thymeleaf+Docker+MySQL</li>
+                    <div class="subheading mb-3">Workflow</div>
+                    <ul class="fa-ul mb-0">
                         <li>
-                            <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
-                            [项目描述]为校内机器博弈社团开发一个集博客、问答、吐槽、个人中心和后台管理功能的多租户论坛
-                            <br/>
-                            <i class="fa fa-cogs"></i>
-                            [功能描述]整个项目中有两个角色：普通用户和管理员。普通用户可在个人中心更新资料，在博客模块下浏览其他人的博客、评论其他人的博客、发表博客、删除自己的博客；问答模块和博客模块类似；吐槽模块下发表匿名吐槽。<br>
-                            管理员除了拥有普通用户的功能还有：进入管理后台、生成邀请码、删除普通用户、添加或删除博客以及问答的分类、置顶或取消置顶问答以及博客。
-                            未注册的用户仅能查看首页、可通过邀请码进行注册。
-                            首页根据用户的标签为用户推荐相关文章
-                            <br/>
-
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            在SpringBoot下进行后端开发
                         </li>
                         <li>
-
-                            <i class="fa fa-bars" aria-hidden="true"></i>
-                            [责任描述]
-                            <!-- <mark>“调研-设计-实现-上线”</mark> -->
-                            <ul>
-                                <li>负责整个项目的设计和实现</li>
-                                <li>将开发完成的项目部署到云服务器上</li>
-                            </ul>
-
-                            <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-                            [效果]申请软件著作权《基于智能推荐的Code社交系统》、作为大创成果结项
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            使用Vue3进行前端开发
                         </li>
-                    </ul>
-                </li>
-                <br>
-
-                <li>
-                    <h3>
-                        <span>[项目2]爱恩斯坦棋博弈算法</span>
-                            <span class="link">
-                                 <a href="https://github.com/cuntoushifu/EWN" target="_blank">Demo</a>
-                             </span>
-                        <time>2020.6-2021.9</time>
-                    </h3>
-                    <ul class="info-content">
-                        <li>技术栈：Java、计算机博弈、蒙特卡洛搜索算法、UCT算法</li>
                         <li>
-                            <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
-                            [目标]实现爱恩斯坦棋博弈算法
-                            <br/>
-                            <!-- <i class="fa fa-users" aria-hidden="true"></i>
-                            [团队]与 2位同学
-                            <br/> -->
-                            <i class="fa fa-bars" aria-hidden="true"></i>
-                            [贡献]实现搜索蒙特卡洛博弈树，基于
-                            <mark>UCT</mark>
-                            和
-                            <mark>多线程技术</mark>
-                            实现博弈算法，根据对弈结果对蒙特卡洛模拟搜索的劣势进行处理
-                            <br/>
-                            <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-                            [效果]作品连续两年取得“安徽省计算机博弈大赛”三等奖，毕业设计
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            MySql&Redis&RabbitMQ等各种软件在生产、开发、测试环境的部署
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Docker
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            centos&ubuntu实体服务器&云服务器的安装维护
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            软路由&NAS的安装维护
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            FRP&VPN等异地组网，内网突破环境的部署维护
                         </li>
                     </ul>
-                </li>
-
-            </ul>
-        </section>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <!-- 自我评价 -->
-         <!--
-        <section class="work info-unit">
-            <h2>
-                <i class="fa fa-pencil" aria-hidden="true"></i>自我评价/期望</h2>
-            <hr/>
-            <p>
-                <br>
-                <span class="mark-txt">”乐于助人“</span>本科在校期间,带领近100名学弟学妹学习Java编程知识,参加职业技能比赛</p>
-            <br>
-            <span class="mark-txt">“技术宅”</span>组装实体机安装群晖、UNAS和OMV等系统，在内网环境部署docker、aria2等环境</p>
-        </section>
-    </section>
-    -->
-    </section>
-</article>
-<!-- 侧栏 -->
-<aside>
-    <ul>
-
-        <li>
-            <a href="https://www.cuntoushifu.com/" target="_blank">Blog</a>
-        </li>
-    </ul>
-</aside>
-
-<!--    <footer class="footer">
-        <p>© 2021 杨烨.文档最后更新时间为
-            <time>2021年11月22日</time>.</p>
-    </footer>-->
-
-<footer class="footer" id="footer">
-    <ul class="copyright">
-        <!--IP信息模块-->
-        <li>IP：
-            <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
-            <script type="text/javascript">
-                document.write(returnCitySN["cip"])
-            </script>
-        </li>
-        <li>节点：
-            <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
-            <script type="text/javascript">
-                document.write(returnCitySN["cid"])
-            </script>
-        </li>
-        <!--位置信息模块-->
-        <li>位置：
-            <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
-            <script type="text/javascript">
-                document.write(returnCitySN["cname"])
-            </script>
-        </li>
-    </ul>
-    <!--版权信息，请勿修改！-->
-     <!--
-    <p>
-        <a target="_blank" href="https://cuntoushifu.com">寸头师傅</a>
-    </p>
-    -->
-</footer>
-
-
-<br>
-<br>
-<br>
-
-<script src="./assets/js/index.js"></script>
-<script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https'){
-   bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-  }
-  else{
-  bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-  }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
-
-</body>
-
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Interests-->
+            <section class="resume-section" id="interests">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Interests</h2>
+                    <p>NAS&软路由爱好者，热衷于在局域网折腾各种环境</p>
+                    <p>写博客，准确的说是搭建各种博客系统，因为没什么有质量的输出内容</p>
+                    <p>游泳，尽管姿势难看</p>
+                    <p>看电影</p>
+                    <p>会吃又会做</p>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Awards-->
+            <section class="resume-section" id="awards">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Awards & Certifications</h2>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            2020年安徽省计算机博弈大赛爱恩斯坦棋组三等奖
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            2021年安徽省计算机博弈大赛爱恩斯坦棋组三等奖
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            2022年安徽新华学院优秀毕业论文《UCT算法在爱恩斯坦棋博弈中的研究与改进》
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            2020年中国大学生计算机设计大赛安徽省级赛-优胜奖-《CodeHero 后台权限管理系统》
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            软件著作权-优胜奖-《基于智能分类的大学生技术交流平台》-证书号：7309739
+                        </li>
+                        <!--li-->
+                        <!--    span.fa-li-->
+                        <!--        i.fas.fa-trophy.text-warning-->
+                        <!--    | 1-->
+                        <!--    sup st-->
+                        <!--    | Place - University of Colorado Boulder - Emerging Tech Competition 2009-->
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
 </html>
